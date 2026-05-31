@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XCOMputer's</title>
+    <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTABWiea1rgjbdKfdgaXt3Gz5xrfEceH8j9qFBE3VQShg&s">
+</head>
+  
+
+  <!-- background -->
+<body class="bg-primary" style="background-image: url(https://media4.giphy.com/media/J19UYavxCtJREzZq1b/giphy.gif?cid=ecf05e47pvvat41ok5r4abuws9zmyrb3onhz2egk5ryc6wz6&ep=v1_gifs_related&rid=giphy.gif&ct=s);">
+
+
+  <!-- error alert -->
+  <div id="bought">
+    <a data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="z-index: 1; position: fixed; bottom:24px; right:24px;">
+      <img height="40px" width="40px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Facebook_Messenger_logo_2020.svg/2048px-Facebook_Messenger_logo_2020.svg.png">
+    </a>
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Error Function // 0050</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Sorry but this function is either unavailable or under maintenance
+            We apologize for the inconvenience
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+  
+
+  <!-- navigation -->
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark shadow-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand text-primary" href="index.html">XCOMputer's</a>
+      
+  
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#aboutus">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contactus">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#followus">Follow Us</a>
+          </li>
+        </ul>
+
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Search</button>
+        </form>
+      
+
+
+      </div>
+    </div>
+  
+  </nav>
+
+
+  <!-- popup -->
+  <div id="productAlert" class="m-2 alert alert-success invisible" role="alert">
+    <p id="productAlertText"></p>
+
+  </div>
+
+
+  <!-- Item -->
+  <div class="container text-light mt-5 bg-dark">
+    <section class="row">
+      <div class="col-lg-8">
+        <img class="productImage" width="100%" src="https://c1.neweggimages.com/ProductImageCompressAll1280/14-126-665-V02.jpg" alt="">
+      </div>
+      <div class="col-lg-4">
+        <h1 class="productTitle"></h1>
+        <p class="productPrice"></p>
+        <button id="buyButton" type="button" class="btn btn-primary">Buy now</button>
+      </div>
+    </section>
+  </div>
+
+
+  <!-- Paa  -->
+    <section class="footer bg-dark">
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 text-light">
+        <div class="col-md-4 mb-0 text-light">
+          <p class="mb-0 text-light">© 2023-2024 XCOM, Inc</p>
+          <p class="mb-0 text-light">Discover the latest technology and find the perfect device for you.</p>
+        </div>
+    
+    
+        
+      </footer>
+    </div>
+    </section>
+
+
+  <!-- Magic -->
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+
+
+    <script>
+      $( document ).ready(function() {
+        // camal casing
+        let itemTitle = localStorage.getItem('item-title');
+        let itemPrice = localStorage.getItem('item-price');
+        let itemImg = localStorage.getItem('item-image');
+        let productTitle = $('.productTitle').html(itemTitle);
+        let productPrice = $('.productPrice').html(itemPrice);
+        let productImage = $('.productImage').attr('src',itemImg);
+        $('#productAlert').hide();
+        $('#productAlert').removeClass('invisible');
+        $('#buyButton').on("click", function() {
+          // we're pulling data from the server and it takes a few second. async
+      
+          $('#productAlertText').html('You have purchased: ' + itemTitle + ' For a total of: ' + itemPrice); // data back from server, success.
+          $('#productAlert').toggle(); 
+
+
+          // Objective: When they click the purchase button, show purchase details.
+
+          
+      
+        })
+      
+      })
+    </script>
+<div class="container"> <footer class="py-5"> <div class="row"> <div class="col-6 col-md-2 mb-3"> <h5>Section</h5> <ul class="nav flex-column"> <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li> <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li> <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li> <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li> <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li> </ul> </div> <div class="col-6 col-md-2 mb-3"> <h5>Section</h5> <ul class="nav flex-column"> <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li> <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li> <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li> <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li> <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li> </ul> </div> <div class="col-6 col-md-2 mb-3"> <h5>Section</h5> <ul class="nav flex-column"> <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li> <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li> <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li> <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li> <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li> </ul> </div> <div class="col-md-5 offset-md-1 mb-3"> <form> <h5>Subscribe to our newsletter</h5> <p>Monthly digest of what's new and exciting from us.</p> <div class="d-flex flex-column flex-sm-row w-100 gap-2"> <label for="newsletter1" class="visually-hidden">Email address</label> <input id="newsletter1" type="email" class="form-control" placeholder="Email address" fdprocessedid="2s9m4s"> <button class="btn btn-primary" type="button" fdprocessedid="89xan">Subscribe</button> </div> </form> </div> </div> <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top"> <p>© 2025 Company, Inc. All rights reserved.</p> <ul class="list-unstyled d-flex"> <li class="ms-3"><a class="link-body-emphasis" href="#" aria-label="Instagram"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li> <li class="ms-3"><a class="link-body-emphasis" href="#" aria-label="Facebook"><svg class="bi" width="24" height="24" aria-hidden="true"><use xlink:href="#facebook"></use></svg></a></li> </ul> </div> </footer> </div>
+
+
+</body>
+</html>
+

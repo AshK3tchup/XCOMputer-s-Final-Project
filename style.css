@@ -1,0 +1,780 @@
+    /* Icon Hover Effect */
+    .iconFont i {
+        color: rgba(255, 255, 255, 0.5);
+        /* current faded white */
+        transition: color 0.3s ease;
+    }
+
+    .iconFont:hover i {
+        color: white !important;
+    }
+
+
+    /*                                         */
+    
+
+    /* Dropdown Menu on Hover */
+    @media (min-width: 992px) {
+        .dropdown-menu {
+            display: block;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transform: translateY(-10px);
+            transition: opacity 0.3s ease,
+                transform 0.3s ease,
+                visibility 0.3s;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes dropdownReveal {
+        from {
+            opacity: 0;
+            transform: translateY(-100px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+
+    .dropdown-item:hover {
+        background-color: rgba(33, 37, 41, 1) !important;
+        color: white !important
+    }
+
+
+    /*                                         */
+
+
+    /* Header Hover Animations */
+    .headerHover {
+        background-color: rgba(33, 37, 41, 0.3) !important;
+        transition: background-color 0.4s ease;
+    }
+
+    .headerHover:hover {
+        background-color: rgba(33, 37, 41, 1) !important;
+    }
+
+
+    /*                                         */
+
+
+    /* Animations & Transitions */
+    .imageReveal {
+        animation-name: imageReveal;
+        animation-fill-mode: both;
+        animation-timeline: view();
+        animation-range: entry 40% cover 50%;
+    }
+
+    .imageRevealFooter {
+        animation-name: imageRevealFooter;
+        animation-fill-mode: both;
+        animation-timeline: view();
+        animation-range: entry 5% cover 30%;
+    }
+
+    .imageFadeout {
+        animation-name: imageFadeout;
+        animation-fill-mode: both;
+        animation-timeline: view();
+        animation-range: exit 30% exit 80%;
+    }
+
+    @keyframes imageReveal {
+        from {
+            opacity: 0;
+            transform: translateY(100px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes imageRevealFooter {
+        from {
+            opacity: 0;
+            transform: scale(0.60);
+        }
+
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    @keyframes imageFadeout {
+        from {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        to {
+            opacity: 0;
+            transform: translateY(-100px);
+        }
+    }
+
+
+    /*                                         */
+
+
+    /* Alternate Picture on Hover*/
+
+    /* GPU */
+    .gpu1 {
+        background-image: url(https://microless.com/cdn/products/201c4d8afa10bc5a05e7c2648a8f4462-hi.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .gpu2 {
+        background-image: url(https://www.memoryc.com/images/products/bb/image_4133308.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .gpu3 {
+        background-image: url(https://microless.com/cdn/products/ead3368de2331ce1f40b31e70be74687-hi.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .gpu4 {
+        background-image: url(https://storage-asset.msi.com/global/picture/image/feature/vga/NVIDIA/RTX-4060-GAMING-X-NV-EDITION-8G/images/limited-nv-edition.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .gpu5 {
+        background-image: url(https://i5.walmartimages.com/asr/48e119b5-2b89-4341-a4ed-a9f3a7a8cdb7.d54f1440d891378c904f582435c0c2c2.jpeg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .gpu6 {
+        background-image: url(https://microless.com/cdn/products/2e501e7fc22befec072376a219b7073c-hi.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .gpu7 {
+        background-image: url("https://i0.wp.com/www.funkykit.com/wp-content/uploads/2023/03/IMG_E9310.jpg?ssl=1");
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .gpu8 {
+        background-image: url(https://m.media-amazon.com/images/I/81a2J7B8-9L._AC_UF350,350_QL80_.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    /* CPU */
+    .cpu1 {
+        background-image: url(https://i5.walmartimages.com/asr/b9e0c844-b7a6-42b5-a397-7b4281f9f1b4.07e2e9d328a5109d8d418fda3f1fd62c.jpeg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .cpu2 {
+        background-image: url(https://m.media-amazon.com/images/I/31OCDTN5t7L._SS520_.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .cpu3 {
+        background-image: url(https://i5.walmartimages.com/asr/3e4d9d63-c21c-4054-abe6-9de671556a51.952b630ab9a2ac83900caec35d7db0ed.jpeg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .cpu4 {
+        background-image: url(https://m.media-amazon.com/images/I/61aQ0AzVAML._AC_UF1000,1000_QL80_.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .cpu5 {
+        background-image: url(https://techarc.pk/wp-content/uploads/2026/01/Intel-Core-i7-13700K-Core-i7-13th-Gen-Raptor-Lake-16-Core-24-Thread-P-core-Base-Frequency-3.4-GHz-E-core-Base-Frequency-2.5-GHz-LGA-1700-Processor-2.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .cpu6 {
+        background-image: url(https://media.ldlc.com/r1600/ld/products/00/06/03/51/LD0006035168.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .cpu7 {
+        background-image: url(https://techarc.pk/wp-content/uploads/2026/01/Intel-Core-i7-13700K-Core-i7-13th-Gen-Raptor-Lake-16-Core-24-Thread-P-core-Base-Frequency-3.4-GHz-E-core-Base-Frequency-2.5-GHz-LGA-1700-Processor-2.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .cpu8 {
+        background-image: url(https://c1.neweggimages.com/productimage/nb640/B1MBS2111150RBMI5BC.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    /* MOTHERBOARDS */
+    .mb1 {
+        background-image: url(https://m.media-amazon.com/images/I/8107uOIZKJL._AC_UF894,1000_QL80_.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .mb2 {
+        background-image: url(https://solidhardware.store/wp-content/uploads/2025/03/Z790-AORUS-ELITE-AX-02.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .mb3 {
+        background-image: url(https://dlcdnwebimgs.asus.com/gain/A3777166-EF70-4D33-915B-EC65CF77CAE5/w717/h525/fwebp);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .mb4 {
+        background-image: url(https://dlcdnwebimgs.asus.com/gain/5bc8ad71-902a-4879-9ab4-9e93f784ef45/w800);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .mb5 {
+        background-image: url(https://i5.walmartimages.com/asr/65d327e9-486a-45b2-801c-03ad2ace6be3.056b155cfc18bc604706d50802460bd1.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .mb6 {
+        background-image: url(https://storage-asset.msi.com/global/picture/product/product_1682996945c91b5794e00e65c7b2fcbc837453368f.webp);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .mb7 {
+        background-image: url(https://cdn.cclonline.com/cdn-cgi/image/width=2000/images/avante/B550M-Pro4_box.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .mb8 {
+        background-image: url(https://storage-asset.msi.com/global/picture/image/feature/mb/Z790/MPG-Z790-EDGE-WIFI/kv.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    /* RAM */
+    .ram1 {
+        background-image: url(https://i5.walmartimages.com/seo/G-SKILL-Trident-Z5-RGB-Series-32GB-2-x-16GB-288-Pin-PC-RAM-DDR5-6000-PC5-48000-Desktop-Memory-Model-F5-6000J3636F16GX2-TZ5RS_76e2c50f-a856-47bb-94ab-860cce758b15.327aee224770a754d70f0c01950c4bf6.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .ram2 {
+        background-image: url(https://i5.walmartimages.com/seo/CORSAIR-Vengeance-RGB-Pro-32GB-2-x-16GB-288-Pin-PC-RAM-DDR4-3600-PC4-28800-Desktop-Memory-Model-CMW32GX4M2D3600C18_0b48cce5-9c60-49e2-a304-5bc0add009fe_1.d3203011ded9e18028a96f96d4c0885a.jpeg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .ram3 {
+        background-image: url(https://microless.com/cdn/products/1c6806f6bbb7be9f212b5235c0de7276-hi.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .ram4 {
+        background-image: url(https://media.pangoly.com/img/0/7/f/c/07fc58d4-cb80-4d4c-9464-856d82c88219.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .ram5 {
+        background-image: url(https://pcbuilderqatar.com/cdn/shop/products/g-skill-trident-z5-rgb-series-32gb-2-x-16gb-cl36-pc-ram-ddr5-6000-mhz-sliver-pc-builder-qatar-best-pc-gaming-store-in-qatar-2.png?v=1736745235&width=1280);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .ram6 {
+        background-image: url(https://microless.com/cdn/products/645eb65b8d316a1ab80510c3c30022c6-hi.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .ram7 {
+        background-image: url(https://microless.com/cdn/products/32b433a29238ead63bf34add6657e7a2-hi.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .ram8 {
+        background-image: url(https://m.media-amazon.com/images/I/61LVqCZ+meL._AC_UF894,1000_QL80_.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    /* STORAGE */
+    .store1 {
+        background-image: url(https://alhamlan.store/cdn/shop/files/20-250-218-V01_1024x1024.jpg?v=1697552701);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+
+    }
+
+    .store2 {
+        background-image: url(https://dynaquestpc.com/cdn/shop/products/WD101EFBX.png?v=1616481066&width=400);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .store3 {
+        background-image: url(https://m.media-amazon.com/images/I/81Nf6j556eL.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .store4 {
+        background-image: url(https://serverpartdeals.com/cdn/shop/files/ST20000NM007D-FS-main_800x800.jpg?v=1763134748);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .store5 {
+        background-image: url(https://m.media-amazon.com/images/I/51cck9HOKLL.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .store6 {
+        background-image: url(https://media.box.co.uk/product/5/5/5513f9a6ca7c1589bb971f9829bfbf8a.jpg?=1&height=550);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .store7 {
+        background-image: url(https://images.teamgroupinc.com/products/usb/usb-3/c162/32gb_02.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .store8 {
+        background-image: url(https://content.abt.com/image.php/1281553c5beecb1c8529398b544e2c53?image=/images/products/BDP_Images/Samsung-1TB-T7-USB-32-Gray-Portable-SSD-MU-PC1T0TAM-front-right.jpg&ck=1&width=750&height=550&canvas);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    /* COOLER */
+    .cool1 {
+        background-image: url(https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Liquid-Cooling/base-rgb-elite-coolers-config/Gallery/H100i_RGB_ELITE_20.webp);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .cool2 {
+        background-image: url(https://m.media-amazon.com/images/I/61n8oVp9bgL.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .cool3 {
+        background-image: url(https://i5.walmartimages.com/seo/NZXT-Kraken-RGB-280mm-RL-KR280-W1-AIO-RGB-CPU-Liquid-Cooler-LCD-Display-2-x-F140RGB-Core-Fans-Radiator-Fans-White-LGA-1700-AM5-Compatible_2a678ca7-2b5f-4e19-8388-5cc0a59c83c5.3de569522fc0c96ec2c53133e55ad02f.jpeg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .cool4 {
+        background-image: url(https://i5.walmartimages.com/seo/MSI-MAG-CoreLiquid-240R-V2-AIO-Liquid-CPU-Cooler-240mm-Radiator-Dual-PWM-Fans-ARGB-Lighting-Controlled-Software-LGA-1700-1851-AM5-AM4-Compatible_b8802325-782f-416c-a343-90a5abae0e2d.657ec41295773302c9641584ec1154ac.jpeg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .cool5 {
+        background-image: url(https://dynaquestpc.com/cdn/shop/files/Untitled-2.jpg?v=1682926907&width=1214);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .cool6 {
+        background-image: url(https://cdn.deepcool.com/public/ProductFile/DEEPCOOL/Cooling/CPULiquidCoolers/LT520/Gallery/800X800/01.jpg?fm=webp&q=60);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .cool7 {
+        background-image: url(https://c1.neweggimages.com/NeweggImage/productimage/35-181-335-01.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .cool8 {
+        background-image: url(https://i5.walmartimages.com/asr/a518a623-1b40-4514-92c6-a105daede525.7035e42a8725805f895e5ee93382ba64.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    /* PSU */
+    .psu1 {
+        background-image: url(https://m.media-amazon.com/images/I/71bhPweONsL._AC_UF1000,1000_QL80_.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .psu2 {
+        background-image: url(https://i5.walmartimages.com/asr/c602bcbc-bcce-4e95-9d52-66571c8e1653.de266fea8a39db81e8f85e04a5430301.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .psu3 {
+        background-image: url(https://m.media-amazon.com/images/I/61xJv-6uCSL._AC_UF350,350_QL80_.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .psu4 {
+        background-image: url(https://m.media-amazon.com/images/I/61eS1N0pzmL._AC_UF894,1000_QL80_.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .psu5 {
+        background-image: url(https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020188-NA/Gallery/RMx_White_850_02.webp);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .psu6 {
+        background-image: url(https://www.scan.co.uk/images/products/xlarge/3062881-xl-a.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .psu7 {
+        background-image: url(https://m.media-amazon.com/images/I/618SKsqI-SL._AC_UF350,350_QL80_.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .psu8 {
+        background-image: url(https://www.pbtech.co.nz/imgprod/P/S/PSUBQT900400__2.jpg?h=1008955487);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    /* CASE */
+    .case1 {
+        background-image: url(https://www.jumbo-computer.com/cdn/shop/files/11-139-156-V02_800x.jpg?v=1692791536);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .case2 {
+        background-image: url(https://imagecdn.jw.com.au/media/catalog/product/c/a/case_h5_flow_rgb_w_legend_l_front_fan_rgb_jpg.jpg?width=514&height=514&store=default&image-type=image);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .case3 {
+        background-image: url(https://www.dateks.lv/images/pic/2400/2400/595/1182.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .case4 {
+        background-image: url(https://images.novatech.co.uk/phanteks-ph-es518xtg_dbk01_extra1.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .case5 {
+        background-image: url(https://www.antec.com/product/case/images/gallery-df600-flux-01.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .case6 {
+        background-image: url(https://i5.walmartimages.com/seo/Phanteks-Eclipse-G300A-Ultra-fine-Performance-Mesh-Mid-tower-case-3x-D-RGB-fan-Tempered-Glass-Black_0672f00f-e3a1-44a9-b131-dd08ad6601bc.a04aef39704c5d030a23183315929d36.jpeg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .case7 {
+        background-image: url(https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Cases/CC-9011255-WW/3000D_RGB_AF_BLACK_RENDER_01.webp);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .case8 {
+        background-image: url(https://microless.com/cdn/products/4639ed5b06f73416a2a4f8415fc8b5a8-hi.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    /* MONITOR */
+    .mon1 {
+        background-image: url(https://m.media-amazon.com/images/I/71E9YsdQfTL.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .mon2 {
+        background-image: url(https://i5.walmartimages.com/seo/Acer-27-170Hz-2K-Gaming-Monitor-1ms-AMD-FreeSync-Premium-WQHD-2560-x-1440-HDR-Support-1-x-Display-Port-1-2-2-x-HDMI-2-0-Ports-Nitro-KG271U-Pbiip_881f83df-e451-45e3-8a78-d82302134ac5.ebe2833773ce909fc134cd21c393538e.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .mon3 {
+        background-image: url(https://storage-asset.msi.com/global/picture/image/feature/monitor/Optix-G271CQP/images/Optix-G271CQP-pip-pbp.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .mon4 {
+        background-image: url(https://content.abt.com/image.php/6e2c4eada5e7f16bcb1329c63be44fe0?image=/images/products/BDP_Images/Samsung-27-Inch-G5-Odyssey-QHD-Gaming-Monitor-LC27G55TQWNXZA-Left-Angled.jpg&ck=1&width=750&height=550&canvas);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .mon5 {
+        background-image: url(https://microless.com/cdn/products/38a31aa106bdc3355a71ea8f113fc171-hi.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .mon6 {
+        background-image: url(https://i5.walmartimages.com/asr/b7d9633c-fc31-4d7b-a734-36f7e7a4c767.232ba87f80f13fd665eb2ff4a948a350.jpeg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .mon7 {
+        background-image: url(https://c1.neweggimages.com/ProductImageCompressAll1280/24-475-281-09.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .mon8 {
+        background-image: url(https://c1.neweggimages.com/ProductImageCompressAll1280/24-475-289-01.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    /* PERIPHERAL */
+    .per1 {
+        background-image: url(https://store974.com/cdn/shop/products/NewProject-2021-09-30T140956.828-459545.jpg?crop=center&height=1000&v=1633011822&width=1000);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .per2 {
+        background-image: url(https://i5.walmartimages.com/seo/Logitech-G915-TKL-Ten-keyless-Lightspeed-Wireless-RGB-Mechanical-Gaming-Keyboard-White_a07eeeda-3d08-4a7f-b8b9-4207e403c912.77c3130b6c040c4908bf6edcb7762186.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .per3 {
+        background-image: url(https://m.media-amazon.com/images/I/61QPXQvpVTL._AC_UF350,350_QL80_.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .per4 {
+        background-image: url(https://nlisolutions.com/wp-content/uploads/2022/11/4P4F6AAABA.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .per5 {
+        background-image: url(https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Gaming-Mice/CH-9309011-NA/Gallery/M65_RGB_ELITE_BLK_03.webp);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .per6 {
+        background-image: url(https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Gaming-Keyboards/base-k60-rgb-pro-se-config/Gallery/K60_RGB_PRO_SE_26.webp);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .per7 {
+        background-image: url(https://i5.walmartimages.com/asr/4353fbc7-2dee-404c-a596-219a43681b2b.bdd0001ce2a302cc7b99a854db60073d.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .per8 {
+        background-image: url(https://i5.walmartimages.com/asr/d7fd9641-4f43-4749-9450-8fb2b2ebe5d4.8f81d5f37b78467f50d55bea73ec746e.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    /* ACCESSORIES */
+    .access1 {
+        background-image: url(https://digitalzone.qa/cdn/shop/files/5_36420be9-9c62-4887-8676-87fd2a2accdf.png?crop=center&height=810&v=1728996140&width=1080);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .access2 {
+        background-image: url(https://i5.walmartimages.com/seo/Blue-Yeti-USB-Microphone-PC-Mac-Gaming-Recording-Streaming-Podcasting-Studio-Computer-Condenser-Mic-Blue-VO-CE-effects-4-Pickup-Patterns-Plug-Play-Mi_62806000-1126-4552-8a13-263ad60525f2.fa4787979d72aef4b3ab25f131ff47a9.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .access3 {
+        background-image: url(https://images-na.ssl-images-amazon.com/images/I/61L5FrrtHqL._AC_UL495_SR435,495_.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .access4 {
+        background-image: url(https://nelooq.com/liveimages/nelooq_cms_product_images/9701321763.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .access5 {
+        background-image: url(https://manuals.plus/wp-content/uploads/2022/01/Rosewill-SAROSC740S-Bluetooth-and-Noise-Cancellation-Headphone-featured.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .access6 {
+        background-image: url("https://i5.walmartimages.com/seo/Blue-Yeti-USB-Microphone-PC-Mac-Gaming-Recording-Streaming-Podcasting-Studio-Computer-Condenser-Mic-Blue-VO-CE-effects-4-Pickup-Patterns-Plug-Play-Bl_2970a92e-58e7-4db9-baa3-a5cc1ba55374.0893a3746b30596275cbe64d803013bf.jpeg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .access7 {
+        background-image: url(https://i5.walmartimages.com/seo/Logitech-Zone-Vibe-100-Lightweight-Wireless-Ear-Headphones-Noise-Canceling-Microphone-Advanced-Multipoint-Bluetooth-Headset-Works-Teams-Google-Meet-Z_3efb98fa-45cf-4066-be15-8cf61916e1c3.d4296d03c6e8874184aea56da918b99c.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+    .access8 {
+        background-image: url(https://content.etilize.com/Original/1077936580.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 214.5px;
+    }
+
+
+    /*                                         */
+
+    
+    /* Image Hover Effect */
+    .ihv {
+        opacity: 0;
+        transition-duration: .75s;
+    }
+
+    .ihv:hover {
+        opacity: 1;
+    }
+
+html, body {
+    overflow-x: hidden;
+}

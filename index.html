@@ -1,0 +1,3582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XCOMputer's</title>
+  <link rel="icon" type="image/x-icon"
+    href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTABWiea1rgjbdKfdgaXt3Gz5xrfEceH8j9qFBE3VQShg&s">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+
+
+
+  <style>
+
+    /* Google Font Import */
+    .orbitron {
+      font-family: "Orbitron", sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+      font-size: .8rem;
+    }
+    
+    .orbitron-title {
+      font-family: "Orbitron", sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+      font-size: 4rem;
+      font-weight: 800;
+      color: white;
+      text-transform: uppercase;
+    }
+
+
+    /*                                         */
+
+
+    /* Featured Brands Style */
+    .promo-card {
+      position: relative;
+      overflow: hidden;
+      height: 650px;
+    }
+
+    .promo-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.4s ease;
+    }
+
+    .promo-card:hover img {
+      transform: scale(1.03);
+    }
+
+    .promo-content {
+      position: absolute;
+      bottom: 40px;
+      left: 40px;
+      z-index: 2;
+    }
+
+    .promo-title-banner {
+      font-size: 4rem;
+      font-weight: 700;
+      color: #0d6efd;
+      line-height: 1;
+      text-transform: uppercase;
+      
+    }
+
+    .promo-title {
+      font-size: 5rem;
+      font-weight: 800;
+      color: white;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .shop-btn {
+      position: absolute;
+      bottom: 40px;
+      right: 40px;
+      background: transparent;
+      color: white;
+      font-weight: 700;
+      border: 2px solid white;
+      padding: 12px 28px;
+      text-transform: uppercase;
+      transition: 0.3s;
+    }
+
+    .shop-btn:hover {
+      color: white;
+      background: #0d6efd;
+      border: 2px solid #0d6efd;
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 768px) {
+      .promo-card {
+        height: 450px;
+      }
+
+      .promo-title {
+        font-size: 3rem;
+      }
+
+      .promo-content {
+        left: 20px;
+        bottom: 20px;
+      }
+
+      .shop-btn {
+        right: 20px;
+        bottom: 20px;
+      }
+    }
+
+
+    /*                                         */
+
+
+    /* Custom Carousel Side Buttons and Animations*/
+    .custom-carousel-btn {
+      width: 50px;
+      height: 50px;
+      background-color: transparent;
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 1;
+    }
+
+    .carousel-control-prev.custom-carousel-btn {
+      left: -65px;
+      animation: leftJiggle 1.2s infinite ease-in-out
+    }
+
+    .carousel-control-next.custom-carousel-btn {
+      right: -50px;
+      animation: rightJiggle 1.2s infinite ease-in-out
+    }
+
+
+    
+    /* To Be Decided */
+    /* Bootstrap Blue Background or */
+    .custom-carousel-btn:hover {
+      background-color: #0d6efd;
+    }
+
+    /* Transparent Background */
+    /* .custom-carousel-btn:hover {
+      background-color: transparent;
+      filter: invert(1);
+    } */
+
+
+
+    .custom-carousel-btn .carousel-control-prev-icon,
+    .custom-carousel-btn .carousel-control-next-icon {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    .custom-carousel-btn-lp {
+      width: 50px;
+      height: 50px;
+      background-color: transparent;
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 1;
+      filter: invert(1);
+    }
+
+    
+
+    /* To Be Decided */
+    /* Bootstrap Blue Background or */
+    .carousel-control-prev.custom-carousel-btn-lp:hover { 
+      left: 10px;
+      background-color: #f29102;
+      border: none;
+      animation: leftJiggle 1.2s infinite ease-in-out
+    }
+
+    /* Transparent Background */
+    .carousel-control-next.custom-carousel-btn-lp:hover { 
+      right: 10px;
+      background-color: #f29102;
+      border: none;
+      animation: rightJiggle 1.2s infinite ease-in-out
+    }
+
+
+
+    .custom-carousel-btn-lp .carousel-control-prev-icon,
+    .custom-carousel-btn-lp .carousel-control-next-icon {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    @keyframes leftJiggle {
+      0% {
+        transform: translateY(-50%) translateX(0);
+      }
+      50% {
+        transform: translateY(-50%) translateX(-7px);
+      }
+      100% {
+        transform: translateY(-50%) translateX(0);
+      }
+    }
+
+    @keyframes rightJiggle {
+      0% {
+        transform: translateY(-50%) translateX(0);
+      }
+      50% {
+        transform: translateY(-50%) translateX(7px);
+      }
+      100% {
+        transform: translateY(-50%) translateX(0);
+      }
+
+
+    }
+
+
+    /*                                         */
+
+
+    /* Hero Button */
+    .hero-btn{
+      border: 2px solid white;
+      padding: 15px 40px;
+      letter-spacing: 2px;
+      margin-bottom: 70px;
+      transition: 0.3s;
+      color: white;
+    }
+
+    .hero-btn:hover{
+      color: #0d6efd;
+      border-color: #0d6efd;
+    }
+
+
+    /*                                         */
+
+
+    /* Laptop and Pre-built Computer Section */
+    .carousel,
+    .carousel-inner,
+    .carousel-item {
+      height: 100%;
+    }
+
+    .carousel-item .card {
+      height: 600px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .carousel-item .card-body {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .view-details-btn {
+      margin-top: auto;
+    }
+
+    .card-img-top-lp {
+      height: 350px;
+      object-fit: cover;
+    }
+
+
+    /*                                         */
+
+
+    /* Auto Scroll From Hero to Next Item Category Section */
+    .hero{
+      position: relative;
+      overflow: hidden;
+    }
+
+    .scroll-down{
+      position: absolute;
+      bottom: 20px;
+      left: 48%;
+      transform: translateX(-50%);
+      z-index: 10;
+      text-decoration: none;
+      font-size: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #nextSection {
+      scroll-margin-top: 25px; 
+    }
+
+    #nextSection.scroll-down {
+      display: inline-block;
+      animation: bounceUpDown 1.2s infinite ease-in-out;
+    }
+
+    @keyframes bounceUpDown {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(10px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+
+    /*                                         */
+
+
+    /* Shopping Cart Sidebar */
+    #cartToggle{
+      display: none;
+    }
+
+    #cartOverlay{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.55);
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.3s ease;
+      z-index: 998;
+    }
+
+    #cartSidebar{
+      position: fixed;
+      top: 0;
+      right: -420px;
+      width: 420px;
+      max-width: 100%;
+      height: 100vh;
+      background: white;
+      transition: 0.35s ease;
+      z-index: 999;
+      padding: 30px;
+      overflow-y: auto;
+    }
+
+    #cartToggle:checked ~ #cartOverlay{
+      opacity: 1;
+      visibility: visible;
+    }
+
+    #cartToggle:checked ~ #cartSidebar{
+      right: 0;
+    }
+
+    #closeCart{
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      border: 2px solid #0d6efd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 22px;
+    }
+
+    .cart-content{
+      margin-top: 120px;
+      text-align: center;
+    }
+
+    .cart-content h2{
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+
+    .continue-btn{
+      border: 2px solid black;
+      background: white;
+      padding: 15px 40px;
+      letter-spacing: 2px;
+      margin-bottom: 70px;
+      transition: 0.3s;
+    }
+
+    .continue-btn:hover{
+      background: #0d6efd;
+      color: white;
+      border-color: #0d6efd;
+    }
+
+
+    /*                                         */
+
+
+    /* Login Dropdown */
+    .login-collapse{
+        position: absolute;
+        right: 0;
+        top: 100%;
+        z-index: 1000;
+        min-width: 300px;
+    }
+
+    .login-box{
+        width: 300px;
+        background: white;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        
+    }
+
+    .login-box .form-control{
+        border: 1px solid #999;
+        background-color: #fff;
+    }
+
+    .login-box .form-check-input{
+        border: 1px solid #666;
+    }
+
+    @media (max-width: 992px){
+
+        .login-collapse{
+            position: static;
+            min-width: 100%;
+            margin-top: 10px;
+        }
+        .login-box{
+            width: 100%;
+        }
+    }
+
+
+    /*                                         */
+
+    
+    /* Icon Hover Effect */
+    .iconFont i {
+      color: rgba(255, 255, 255, 0.5);
+      transition: color 0.3s ease;
+    }
+
+    .iconFont:hover i {
+      color: white !important;
+    }
+
+
+    /*                                         */
+
+
+    /* Dropdown Menu on Hover */
+    @media (min-width: 992px) {
+      .dropdown-menu {
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease,
+          transform 0.3s ease,
+          visibility 0.3s;
+      }
+
+      .dropdown:hover .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes dropdownReveal {
+      from {
+        opacity: 0;
+        transform: translateY(-100px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+    }
+
+    .dropdown-item:hover {
+      background-color: rgba(33, 37, 41, 1) !important;
+      color: white !important
+    }
+
+
+    /*                                         */
+
+
+    /* Header Hover Animations */
+    .headerHover {
+      background-color: transparent !important;
+      transition: background-color 0.4s ease;
+    }
+
+    .headerHover:hover {
+      background-color: rgba(33, 37, 41, 1) !important;
+    }
+
+    
+    /*                                         */
+
+
+    /* Animations & Transitions */
+    .imageReveal {
+      animation-name: imageReveal;
+      animation-fill-mode: both;
+      animation-timeline: view();
+      animation-range: entry 40% cover 50%;
+    }
+
+    .imageRevealFooter {
+      animation-name: imageRevealFooter;
+      animation-fill-mode: both;
+      animation-timeline: view();
+      animation-range: entry 5% cover 30%;
+    }
+
+    .imageFadeout {
+      animation-name: imageFadeout;
+      animation-fill-mode: both;
+      animation-timeline: view();
+      animation-range: exit 30% exit 80%;
+    }
+
+    @keyframes imageReveal {
+      from {
+        opacity: 0;
+        transform: translateY(100px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes imageRevealFooter {
+      from {
+        opacity: 0;
+        transform: scale(0.60);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes imageFadeout {
+      from {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      to {
+        opacity: 0;
+        transform: translateY(-100px);
+      }
+    }
+
+    
+    /*                                         */
+
+
+    /* Alternate Picture on Hover*/
+    /* GPU */
+    .gpu1 {
+      background-image: url(https://microless.com/cdn/products/201c4d8afa10bc5a05e7c2648a8f4462-hi.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .gpu2 {
+      background-image: url(https://www.memoryc.com/images/products/bb/image_4133308.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .gpu3 {
+      background-image: url(https://microless.com/cdn/products/ead3368de2331ce1f40b31e70be74687-hi.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .gpu4 {
+      background-image: url(https://storage-asset.msi.com/global/picture/image/feature/vga/NVIDIA/RTX-4060-GAMING-X-NV-EDITION-8G/images/limited-nv-edition.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .gpu5 {
+      background-image: url(https://i5.walmartimages.com/asr/48e119b5-2b89-4341-a4ed-a9f3a7a8cdb7.d54f1440d891378c904f582435c0c2c2.jpeg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .gpu6 {
+      background-image: url(https://microless.com/cdn/products/2e501e7fc22befec072376a219b7073c-hi.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .gpu7 {
+      background-image: url("https://i0.wp.com/www.funkykit.com/wp-content/uploads/2023/03/IMG_E9310.jpg?ssl=1");
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .gpu8 {
+      background-image: url(https://m.media-amazon.com/images/I/81a2J7B8-9L._AC_UF350,350_QL80_.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    /* CPU */
+    .cpu1 {
+      background-image: url(https://i5.walmartimages.com/asr/b9e0c844-b7a6-42b5-a397-7b4281f9f1b4.07e2e9d328a5109d8d418fda3f1fd62c.jpeg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .cpu2 {
+      background-image: url(https://m.media-amazon.com/images/I/31OCDTN5t7L._SS520_.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .cpu3 {
+      background-image: url(https://i5.walmartimages.com/asr/3e4d9d63-c21c-4054-abe6-9de671556a51.952b630ab9a2ac83900caec35d7db0ed.jpeg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .cpu4 {
+      background-image: url(https://m.media-amazon.com/images/I/61aQ0AzVAML._AC_UF1000,1000_QL80_.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .cpu5 {
+      background-image: url(https://techarc.pk/wp-content/uploads/2026/01/Intel-Core-i7-13700K-Core-i7-13th-Gen-Raptor-Lake-16-Core-24-Thread-P-core-Base-Frequency-3.4-GHz-E-core-Base-Frequency-2.5-GHz-LGA-1700-Processor-2.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .cpu6 {
+      background-image: url(https://media.ldlc.com/r1600/ld/products/00/06/03/51/LD0006035168.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .cpu7 {
+      background-image: url(https://techarc.pk/wp-content/uploads/2026/01/Intel-Core-i7-13700K-Core-i7-13th-Gen-Raptor-Lake-16-Core-24-Thread-P-core-Base-Frequency-3.4-GHz-E-core-Base-Frequency-2.5-GHz-LGA-1700-Processor-2.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .cpu8 {
+      background-image: url(https://c1.neweggimages.com/productimage/nb640/B1MBS2111150RBMI5BC.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    /* MOTHERBOARDS */
+    .mb1 {
+      background-image: url(https://m.media-amazon.com/images/I/8107uOIZKJL._AC_UF894,1000_QL80_.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .mb2 {
+      background-image: url(https://solidhardware.store/wp-content/uploads/2025/03/Z790-AORUS-ELITE-AX-02.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .mb3 {
+      background-image: url(https://dlcdnwebimgs.asus.com/gain/A3777166-EF70-4D33-915B-EC65CF77CAE5/w717/h525/fwebp);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .mb4 {
+      background-image: url(https://dlcdnwebimgs.asus.com/gain/5bc8ad71-902a-4879-9ab4-9e93f784ef45/w800);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .mb5 {
+      background-image: url(https://i5.walmartimages.com/asr/65d327e9-486a-45b2-801c-03ad2ace6be3.056b155cfc18bc604706d50802460bd1.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .mb6 {
+      background-image: url(https://storage-asset.msi.com/global/picture/product/product_1682996945c91b5794e00e65c7b2fcbc837453368f.webp);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .mb7 {
+      background-image: url(https://cdn.cclonline.com/cdn-cgi/image/width=2000/images/avante/B550M-Pro4_box.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .mb8 {
+      background-image: url(https://storage-asset.msi.com/global/picture/image/feature/mb/Z790/MPG-Z790-EDGE-WIFI/kv.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    /* RAM */
+    .ram1 {
+      background-image: url(https://i5.walmartimages.com/seo/G-SKILL-Trident-Z5-RGB-Series-32GB-2-x-16GB-288-Pin-PC-RAM-DDR5-6000-PC5-48000-Desktop-Memory-Model-F5-6000J3636F16GX2-TZ5RS_76e2c50f-a856-47bb-94ab-860cce758b15.327aee224770a754d70f0c01950c4bf6.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .ram2 {
+      background-image: url(https://i5.walmartimages.com/seo/CORSAIR-Vengeance-RGB-Pro-32GB-2-x-16GB-288-Pin-PC-RAM-DDR4-3600-PC4-28800-Desktop-Memory-Model-CMW32GX4M2D3600C18_0b48cce5-9c60-49e2-a304-5bc0add009fe_1.d3203011ded9e18028a96f96d4c0885a.jpeg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .ram3 {
+      background-image: url(https://microless.com/cdn/products/1c6806f6bbb7be9f212b5235c0de7276-hi.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .ram4 {
+      background-image: url(https://media.pangoly.com/img/0/7/f/c/07fc58d4-cb80-4d4c-9464-856d82c88219.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .ram5 {
+      background-image: url(https://pcbuilderqatar.com/cdn/shop/products/g-skill-trident-z5-rgb-series-32gb-2-x-16gb-cl36-pc-ram-ddr5-6000-mhz-sliver-pc-builder-qatar-best-pc-gaming-store-in-qatar-2.png?v=1736745235&width=1280);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .ram6 {
+      background-image: url(https://microless.com/cdn/products/645eb65b8d316a1ab80510c3c30022c6-hi.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .ram7 {
+      background-image: url(https://microless.com/cdn/products/32b433a29238ead63bf34add6657e7a2-hi.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .ram8 {
+      background-image: url(https://m.media-amazon.com/images/I/61LVqCZ+meL._AC_UF894,1000_QL80_.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    /* STORAGE */
+    .store1 {
+      background-image: url(https://alhamlan.store/cdn/shop/files/20-250-218-V01_1024x1024.jpg?v=1697552701);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+
+    }
+
+    .store2 {
+      background-image: url(https://dynaquestpc.com/cdn/shop/products/WD101EFBX.png?v=1616481066&width=400);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .store3 {
+      background-image: url(https://m.media-amazon.com/images/I/81Nf6j556eL.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .store4 {
+      background-image: url(https://serverpartdeals.com/cdn/shop/files/ST20000NM007D-FS-main_800x800.jpg?v=1763134748);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .store5 {
+      background-image: url(https://m.media-amazon.com/images/I/51cck9HOKLL.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .store6 {
+      background-image: url(https://media.box.co.uk/product/5/5/5513f9a6ca7c1589bb971f9829bfbf8a.jpg?=1&height=550);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .store7 {
+      background-image: url(https://images.teamgroupinc.com/products/usb/usb-3/c162/32gb_02.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .store8 {
+      background-image: url(https://content.abt.com/image.php/1281553c5beecb1c8529398b544e2c53?image=/images/products/BDP_Images/Samsung-1TB-T7-USB-32-Gray-Portable-SSD-MU-PC1T0TAM-front-right.jpg&ck=1&width=750&height=550&canvas);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    /* COOLER */
+    .cool1 {
+      background-image: url(https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Liquid-Cooling/base-rgb-elite-coolers-config/Gallery/H100i_RGB_ELITE_20.webp);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .cool2 {
+      background-image: url(https://m.media-amazon.com/images/I/61n8oVp9bgL.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .cool3 {
+      background-image: url(https://i5.walmartimages.com/seo/NZXT-Kraken-RGB-280mm-RL-KR280-W1-AIO-RGB-CPU-Liquid-Cooler-LCD-Display-2-x-F140RGB-Core-Fans-Radiator-Fans-White-LGA-1700-AM5-Compatible_2a678ca7-2b5f-4e19-8388-5cc0a59c83c5.3de569522fc0c96ec2c53133e55ad02f.jpeg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .cool4 {
+      background-image: url(https://i5.walmartimages.com/seo/MSI-MAG-CoreLiquid-240R-V2-AIO-Liquid-CPU-Cooler-240mm-Radiator-Dual-PWM-Fans-ARGB-Lighting-Controlled-Software-LGA-1700-1851-AM5-AM4-Compatible_b8802325-782f-416c-a343-90a5abae0e2d.657ec41295773302c9641584ec1154ac.jpeg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .cool5 {
+      background-image: url(https://dynaquestpc.com/cdn/shop/files/Untitled-2.jpg?v=1682926907&width=1214);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .cool6 {
+      background-image: url(https://cdn.deepcool.com/public/ProductFile/DEEPCOOL/Cooling/CPULiquidCoolers/LT520/Gallery/800X800/01.jpg?fm=webp&q=60);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .cool7 {
+      background-image: url(https://c1.neweggimages.com/NeweggImage/productimage/35-181-335-01.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .cool8 {
+      background-image: url(https://i5.walmartimages.com/asr/a518a623-1b40-4514-92c6-a105daede525.7035e42a8725805f895e5ee93382ba64.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    /* PSU */
+    .psu1 {
+      background-image: url(https://m.media-amazon.com/images/I/71bhPweONsL._AC_UF1000,1000_QL80_.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .psu2 {
+      background-image: url(https://i5.walmartimages.com/asr/c602bcbc-bcce-4e95-9d52-66571c8e1653.de266fea8a39db81e8f85e04a5430301.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .psu3 {
+      background-image: url(https://m.media-amazon.com/images/I/61xJv-6uCSL._AC_UF350,350_QL80_.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .psu4 {
+      background-image: url(https://m.media-amazon.com/images/I/61eS1N0pzmL._AC_UF894,1000_QL80_.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .psu5 {
+      background-image: url(https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Power-Supply-Units/CP-9020188-NA/Gallery/RMx_White_850_02.webp);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .psu6 {
+      background-image: url(https://www.scan.co.uk/images/products/xlarge/3062881-xl-a.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .psu7 {
+      background-image: url(https://m.media-amazon.com/images/I/618SKsqI-SL._AC_UF350,350_QL80_.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .psu8 {
+      background-image: url(https://www.pbtech.co.nz/imgprod/P/S/PSUBQT900400__2.jpg?h=1008955487);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    /* CASE */
+    .case1 {
+      background-image: url(https://www.jumbo-computer.com/cdn/shop/files/11-139-156-V02_800x.jpg?v=1692791536);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .case2 {
+      background-image: url(https://imagecdn.jw.com.au/media/catalog/product/c/a/case_h5_flow_rgb_w_legend_l_front_fan_rgb_jpg.jpg?width=514&height=514&store=default&image-type=image);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .case3 {
+      background-image: url(https://www.dateks.lv/images/pic/2400/2400/595/1182.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .case4 {
+      background-image: url(https://images.novatech.co.uk/phanteks-ph-es518xtg_dbk01_extra1.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .case5 {
+      background-image: url(https://www.antec.com/product/case/images/gallery-df600-flux-01.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .case6 {
+      background-image: url(https://i5.walmartimages.com/seo/Phanteks-Eclipse-G300A-Ultra-fine-Performance-Mesh-Mid-tower-case-3x-D-RGB-fan-Tempered-Glass-Black_0672f00f-e3a1-44a9-b131-dd08ad6601bc.a04aef39704c5d030a23183315929d36.jpeg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .case7 {
+      background-image: url(https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Cases/CC-9011255-WW/3000D_RGB_AF_BLACK_RENDER_01.webp);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .case8 {
+      background-image: url(https://microless.com/cdn/products/4639ed5b06f73416a2a4f8415fc8b5a8-hi.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    /* MONITOR */
+    .mon1 {
+      background-image: url(https://m.media-amazon.com/images/I/71E9YsdQfTL.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .mon2 {
+      background-image: url(https://i5.walmartimages.com/seo/Acer-27-170Hz-2K-Gaming-Monitor-1ms-AMD-FreeSync-Premium-WQHD-2560-x-1440-HDR-Support-1-x-Display-Port-1-2-2-x-HDMI-2-0-Ports-Nitro-KG271U-Pbiip_881f83df-e451-45e3-8a78-d82302134ac5.ebe2833773ce909fc134cd21c393538e.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .mon3 {
+      background-image: url(https://storage-asset.msi.com/global/picture/image/feature/monitor/Optix-G271CQP/images/Optix-G271CQP-pip-pbp.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .mon4 {
+      background-image: url(https://content.abt.com/image.php/6e2c4eada5e7f16bcb1329c63be44fe0?image=/images/products/BDP_Images/Samsung-27-Inch-G5-Odyssey-QHD-Gaming-Monitor-LC27G55TQWNXZA-Left-Angled.jpg&ck=1&width=750&height=550&canvas);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .mon5 {
+      background-image: url(https://microless.com/cdn/products/38a31aa106bdc3355a71ea8f113fc171-hi.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .mon6 {
+      background-image: url(https://i5.walmartimages.com/asr/b7d9633c-fc31-4d7b-a734-36f7e7a4c767.232ba87f80f13fd665eb2ff4a948a350.jpeg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .mon7 {
+      background-image: url(https://c1.neweggimages.com/ProductImageCompressAll1280/24-475-281-09.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .mon8 {
+      background-image: url(https://c1.neweggimages.com/ProductImageCompressAll1280/24-475-289-01.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    /* PERIPHERAL */
+    .per1 {
+      background-image: url(https://store974.com/cdn/shop/products/NewProject-2021-09-30T140956.828-459545.jpg?crop=center&height=1000&v=1633011822&width=1000);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .per2 {
+      background-image: url(https://i5.walmartimages.com/seo/Logitech-G915-TKL-Ten-keyless-Lightspeed-Wireless-RGB-Mechanical-Gaming-Keyboard-White_a07eeeda-3d08-4a7f-b8b9-4207e403c912.77c3130b6c040c4908bf6edcb7762186.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .per3 {
+      background-image: url(https://m.media-amazon.com/images/I/61QPXQvpVTL._AC_UF350,350_QL80_.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .per4 {
+      background-image: url(https://nlisolutions.com/wp-content/uploads/2022/11/4P4F6AAABA.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .per5 {
+      background-image: url(https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Gaming-Mice/CH-9309011-NA/Gallery/M65_RGB_ELITE_BLK_03.webp);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .per6 {
+      background-image: url(https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Gaming-Keyboards/base-k60-rgb-pro-se-config/Gallery/K60_RGB_PRO_SE_26.webp);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .per7 {
+      background-image: url(https://i5.walmartimages.com/asr/4353fbc7-2dee-404c-a596-219a43681b2b.bdd0001ce2a302cc7b99a854db60073d.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .per8 {
+      background-image: url(https://i5.walmartimages.com/asr/d7fd9641-4f43-4749-9450-8fb2b2ebe5d4.8f81d5f37b78467f50d55bea73ec746e.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    /* ACCESSORIES */
+    .access1 {
+      background-image: url(https://digitalzone.qa/cdn/shop/files/5_36420be9-9c62-4887-8676-87fd2a2accdf.png?crop=center&height=810&v=1728996140&width=1080);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .access2 {
+      background-image: url(https://i5.walmartimages.com/seo/Blue-Yeti-USB-Microphone-PC-Mac-Gaming-Recording-Streaming-Podcasting-Studio-Computer-Condenser-Mic-Blue-VO-CE-effects-4-Pickup-Patterns-Plug-Play-Mi_62806000-1126-4552-8a13-263ad60525f2.fa4787979d72aef4b3ab25f131ff47a9.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .access3 {
+      background-image: url(https://images-na.ssl-images-amazon.com/images/I/61L5FrrtHqL._AC_UL495_SR435,495_.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .access4 {
+      background-image: url(https://nelooq.com/liveimages/nelooq_cms_product_images/9701321763.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .access5 {
+      background-image: url(https://manuals.plus/wp-content/uploads/2022/01/Rosewill-SAROSC740S-Bluetooth-and-Noise-Cancellation-Headphone-featured.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .access6 {
+      background-image: url("https://i5.walmartimages.com/seo/Blue-Yeti-USB-Microphone-PC-Mac-Gaming-Recording-Streaming-Podcasting-Studio-Computer-Condenser-Mic-Blue-VO-CE-effects-4-Pickup-Patterns-Plug-Play-Bl_2970a92e-58e7-4db9-baa3-a5cc1ba55374.0893a3746b30596275cbe64d803013bf.jpeg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .access7 {
+      background-image: url(https://i5.walmartimages.com/seo/Logitech-Zone-Vibe-100-Lightweight-Wireless-Ear-Headphones-Noise-Canceling-Microphone-Advanced-Multipoint-Bluetooth-Headset-Works-Teams-Google-Meet-Z_3efb98fa-45cf-4066-be15-8cf61916e1c3.d4296d03c6e8874184aea56da918b99c.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+    .access8 {
+      background-image: url(https://content.etilize.com/Original/1077936580.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 214.5px;
+    }
+
+
+    /*                                         */
+
+
+    /* Image Hover Effect */
+    .ihv {
+      opacity: 0;
+      transition-duration: .75s;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .ihv:hover {
+      opacity: 1;
+      background-color: white;
+    }
+  </style>
+
+
+</head>
+
+
+<body class="bg-dark orbitron">
+
+
+  <!-- Modal Error Alert & Messenger Icon Fixed on Bottom Right -->
+  <div id="error">
+
+    <!-- Fixed Messenger Icon on Bottom Right -->
+    <a class="iconFont" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="z-index: 1; position: fixed; bottom:24px; right:24px;">
+      <i class="fs-1 text-secondary fa-brands fa-facebook-messenger"></i>
+    </a>
+
+    <!-- Modal Error Alert -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Error Function // 0050</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Sorry but this function is either unavailable or under maintenance
+            We apologize for the inconvenience
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- Navigation bar -->
+  <nav class="headerHover pt-4 pb-4 navbar fixed-top navbar-expand-lg navbar-dark bg-dark shadow-lg py-2">
+    <div class="container-fluid">
+
+      <!-- Store Name Tab -->
+      <a class="navbar-brand text-primary" href="#">XCOMputer's</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+
+          <!-- Home Tab -->
+          <li class="nav-item active px-3">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+
+          <!-- GPU Section -->
+          <li class="nav-item dropdown px-3">
+            <a class="nav-link dropdown-toggle" href="javascript:void(0)">GPU</a>
+            <ul class="dropdown-menu">
+              <li>
+                <h6 class="dropdown-header text-center text-primary fw-bold">BRAND</h6>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="javascript:void(0)">NVIDIA</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0)">AMD</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0)">Intel</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0)">ASUS</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0)">MSI</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0)">Gigabyte</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0)">AORUS</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0)">Sapphire</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0)">Zotac</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0)">XFX</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0)">PowerColor</a></li>
+            </ul>
+          </li>
+
+          <!-- CPU Section -->
+          <li class="nav-item dropdown px-3">
+            <a class="nav-link dropdown-toggle" href="javascript:void(0)">CPU</a>
+            <ul class="dropdown-menu">
+              <li>
+                <h6 class="dropdown-header text-center text-primary fw-bold">BRAND</h6>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="javascript:void(0)">Intel</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0)">AMD</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0)">Apple</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0)">Qualcomm</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0)">MediaTek</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0)">Samsung</a></li>
+            </ul>
+          </li>
+
+          <!-- Motherboard Section -->
+          <li class="nav-item dropdown px-3">
+            <a class="nav-link dropdown-toggle" href="javascript:void(0)">MOTHERBOARD</a>
+            <ul class="dropdown-menu">
+              <li>
+                <h6 class="dropdown-header text-center text-primary fw-bold">BRAND</h6>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="javascript:void(0)">ASUS</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0)">Gigabyte</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0)">AORUS</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0)">MSI</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0)">ASRock</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0)">NZXT</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0)">Biostar</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0)">Supermicro</a></li>
+            </ul>
+          </li>
+
+          <!-- RAM Section -->
+          <li class="nav-item dropdown px-3">
+            <a class="nav-link dropdown-toggle" href="javascript:void(0)">RAM</a>
+            <ul class="dropdown-menu">
+              <li>
+                <h6 class="dropdown-header text-center text-primary fw-bold">BRAND</h6>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="javascript:void(0)">Samsung</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0)">SK hynix</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0)">Corsair</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0)">Kingston</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0)">G.Skill</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0)">Crucial</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0)">TeamGroup</a></li>
+            </ul>
+          </li>
+
+          <!-- Computer Case Section -->
+          <li class="nav-item dropdown px-3">
+            <a class="nav-link dropdown-toggle" href="javascript:void(0)">COMPUTER CASE</a>
+            <ul class="dropdown-menu">
+              <li>
+                <h6 class="dropdown-header text-center text-primary fw-bold">BRAND</h6>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="javascript:void(0)">Corsair</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0)">NZXT</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0)">Fractal Design</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0)">Lian Li</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0)">Cooler Master</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0)">Thermaltake</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0)">Phanteks</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0)">be quiet!</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0)">SilverStone</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0)">Hyte</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0)">InWin</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0)">Antec</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0)">DeepCool</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <!-- Searchbar -->
+        <form class="d-flex px-3">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop">Search</button>
+        </form>
+
+        <!-- About Us Tab -->
+        <ul class="navbar-nav">
+          <li class="nav-item px-3">
+            <a class="nav-link" href="#aboutus">About Us</a>
+          </li>
+
+          <!-- Login Tab -->
+          <li class="nav-item px-3 position-relative">
+            <a class="nav-link iconFont" data-bs-toggle="collapse" href="#loginDropdown" role="button">
+              <i class="fa-solid fa-user text-white-50"></i>
+            </a>
+
+            <!-- Login Dropdown -->
+            <div class="collapse login-collapse" id="loginDropdown">
+              <div class="card shadow p-3 login-box">
+                <form>
+                  <h5 class="mb-3 text-center">Please sign in</h5>
+                  <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Email address</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword">Password</label>
+                  </div>
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="checkDefault">
+                    <label class="form-check-label" for="checkDefault">Remember me</label>
+                  </div>
+                  <button class="btn btn-primary w-100" type="submit">Sign in</button>
+                  <div class="d-flex mt-3 pb-3">
+                    <li><a class="dropdown-item" href="#">Forgot Password</a></li>
+                    <li><a class="mx-4 dropdown-item" href="#">Sign Up</a></li>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </li>
+
+          <!-- Shopping Cart Tab -->
+          <input type="checkbox" id="cartToggle">
+          <li class="nav-item px-3">
+            <label for="cartToggle" class="nav-link iconFont mb-0">
+              <i class="fa-solid fa-cart-shopping text-white-50"></i>
+            </label>
+          </li>
+
+          <!-- Shopping Cart Side Bar -->
+          <label for="cartToggle" id="cartOverlay"></label>
+          <div id="cartSidebar">
+            <label for="cartToggle" id="closeCart" class="rounded">
+              <i class="fa-solid fa-xmark"></i>
+            </label>
+            <div class="cart-content">
+              <h2>Your cart is empty</h2>
+              <button class="continue-btn rounded">CONTINUE SHOPPING</button>
+              <div class="account-section">
+                <h4>Have an account?</h4>
+                <p>Log in to check out faster.</p>
+              </div>
+            </div>
+          </div>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  
+  <!-- Hero -->
+  <div class="hero position-relative overflow-hidden w-100 bg-dark shadow-lg" style="min-height: 100vh;">
+    <video
+      class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
+      autoplay
+      muted
+      loop
+      playsinline>
+      <source src="videos/XCOMputers_BRoll.mp4" type="video/mp4">
+    </video>
+    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark"
+        style="opacity: 0.55;">
+    </div>
+    <div class="container position-relative z-1 min-vh-100 d-flex align-items-center">
+      <div class="row w-100 justify-content-center text-center text-light pt-5">
+        <div class="col-lg-8 pt-5">
+          <h1 class="display-5 fw-bold mb-4">(Christmas x New Year) Sales Fest until (01/26/2026)</h1>
+          <p class="lead">Get up to 25% discount this holidays and free shipping for most items that takes your fancy this Holidays til Jan. 26, 2026. Ranging from PC components to laptops, we got them here!</p>
+          <p class="fw-lighter">PER DTI TRADE PERMIT NO. FTEB-21378190 SERIES OF 2026</p>
+          <div class="pt-5">
+            <button class="fw-bold hero-btn rounded bg-transparent">USE CODE: CHRISTMAS26</button>
+          </div> 
+        </div>
+      </div>
+      <a href="#nextSection" id="nextSection" class="scroll-down iconFont">
+        <i class="fa-solid fa-chevron-down text-secondary-emphasis"></i>
+      </a>
+    </div>
+  </div>
+
+
+  <!-- Items Category -->
+  <div id="itemCat" class="container imageFadeout pb-4 shadow-lg">
+    <section class="subnav m-2 pt-3">
+      <div class="row text-center text-light">
+        <div class="col-sm">
+
+          <!-- ITEM CATEGORY BUTTONS -->
+          <div class="imageReveal">
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-gpu-tab" data-bs-toggle="pill" data-bs-target="#pills-gpu"
+                  type="button" role="tab" aria-controls="pills-gpu" aria-selected="true">GPU</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-cpu-tab" data-bs-toggle="pill" data-bs-target="#pills-cpu"
+                  type="button" role="tab" aria-controls="pills-cpu" aria-selected="true">CPU</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-motherboard-tab" data-bs-toggle="pill"
+                  data-bs-target="#pills-motherboard" type="button" role="tab" aria-controls="pills-motherboard"
+                  aria-selected="true">Motherboard</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-ram-tab" data-bs-toggle="pill" data-bs-target="#pills-ram"
+                  type="button" role="tab" aria-controls="pills-ram" aria-selected="true">RAM</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-storage-tab" data-bs-toggle="pill" data-bs-target="#pills-storage"
+                  type="button" role="tab" aria-controls="pills-storage" aria-selected="true">Storage</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-coolers-tab" data-bs-toggle="pill" data-bs-target="#pills-coolers"
+                  type="button" role="tab" aria-controls="pills-coolers" aria-selected="true">Coolers</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-psu-tab" data-bs-toggle="pill" data-bs-target="#pills-psu"
+                  type="button" role="tab" aria-controls="pills-psu" aria-selected="true">PSU</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-computercases-tab" data-bs-toggle="pill"
+                  data-bs-target="#pills-computercases" type="button" role="tab" aria-controls="pills-computercases"
+                  aria-selected="true">Computer Cases</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-monitor-tab" data-bs-toggle="pill" data-bs-target="#pills-monitor"
+                  type="button" role="tab" aria-controls="pills-monitor" aria-selected="true">Monitors</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-peripherals-tab" data-bs-toggle="pill"
+                  data-bs-target="#pills-peripherals" type="button" role="tab" aria-controls="pills-peripherals"
+                  aria-selected="true">Mouse & Keyboards</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-accessories-tab" data-bs-toggle="pill"
+                  data-bs-target="#pills-accessories" type="button" role="tab" aria-controls="pills-accessories"
+                  aria-selected="true">Headset & Microphone</button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="tab-content imageReveal" id="pills-tabContent">
+
+            <!-- GPU CARDS -->
+            <div class="tab-pane fade show active" id="pills-gpu" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+              <div id="carouselgpu" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="row">
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="gpu1">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/14-137-475-02.jpg"
+                              alt="MSI GPU">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">MSI Ventus GeForce GTX 1660 SUPER 6GB GDDR6 PCI Express 3.0 x16 Video Card GTX 1660</h5>
+                            <p class="card-text mt-auto">QAR 1,386.60</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="gpu2">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/1FT-001K-003E4-V21.jpg"
+                              alt="EVGA GPU">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">EVGA GeForce RTX 2080 Ti FTW3 ULTRA GAMING, 11G-P4-2487-KR, 11GB GDDR6, iCX2 & RGB LED</h5>
+                            <p class="card-text mt-auto">QAR 6,237.95</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="gpu3">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/14-932-550-23.jpg"
+                              alt="GIGABYTE GPU">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">GIGABYTE Gaming GeForce RTX 4090 24GB GDDR6X PCI Express 4.0 x16 ATX Video Card</h5>
+                            <p class="card-text mt-auto">QAR 10,307.52</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="gpu4">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/14-137-841-01.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">MSI Gaming GeForce RTX 4060 8GB GDDR6 PCI Express 4.0 x8 ATX Video Card RTX 4060</h5>
+                            <p class="card-text mt-auto">QAR 1,333.23</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="row">
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="gpu5">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/14-930-056-01.jpg"
+                              alt="ASRock GPU">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">ASRock Radeon RX 6700 XT Challenger D Gaming Graphic Card, 12GB GDDR6 VRAM, AMD RDNA2</h5>
+                            <p class="card-text mt-auto">QAR 1,209.87</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="gpu6">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/14-150-878-16.jpg"
+                              alt="XFX GPU">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">XFX SPEEDSTER MERC310 Radeon RX 7900 XTX 24GB GDDR6 PCI Express 4.0 x16 Video Card</h5>
+                            <p class="card-text mt-auto">QAR 3,858.24</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="gpu7">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/14-930-081-01.jpg"
+                              alt="ASRock GPU">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">ASRock Phantom Gaming Radeon RX 7900 XTX 24GB GDDR6 PCI Express 4.0 ATX Video Card</h5>
+                            <p class="card-text mt-auto">QAR 3,952.14</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="gpu8">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/14-137-801-16.png"
+                              alt="MSI GPU">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">MSI Mech Radeon RX 6750 XT 12GB GDDR6 PCI Express 4.0 ATX Video Card RX 6750 XT MECH 2X 12G V1</h5>
+                            <p class="card-text mt-auto">QAR 1,366.61</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev custom-carousel-btn" type="button"
+                  data-bs-target="#carouselgpu" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+                </button>
+                <button class="carousel-control-next custom-carousel-btn" type="button"
+                  data-bs-target="#carouselgpu" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+                </button>
+              </div>
+            </div>
+
+            <!-- CPU CARDS -->
+            <div class="tab-pane fade" id="pills-cpu" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+              <div id="carouselcpu" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="row">
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="cpu1">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/19-113-770-02.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">AMD Ryzen 5 7600X - 6-Core 4.7 GHz - Socket AM5 - 105W Desktop Processor</h5>
+                            <p class="card-text mt-auto">QAR 1,000.72</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="cpu2">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/19-118-347-05.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">Intel Core i5-12600K - Core i5 12th Gen Alder Lake 10-Core (6P+4E) 3.7 GHz LGA 1700 125W Intel UHD</h5>
+                            <p class="card-text mt-auto">QAR 763.64</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="cpu3">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/19-113-793-03.png"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">AMD Ryzen 7 7800X3D - Ryzen 7 7000 Series 8-Core 4.2 GHz Socket AM5 120W AMD Radeon</h5>
+                            <p class="card-text mt-auto">QAR 1,614.40</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="cpu4">
+                            <img class="card-img-top ihv"
+                              src="https://i5.walmartimages.com/seo/Intel-Core-i9-14900K-Core-i9-14th-Gen-24-Core-8P-16E-LGA-1700-125W-Intel-UHD-Graphics-770-Desktop-Processor-Boxed-BX8071514900K_b64278bd-c6f9-4261-84c4-98b9bbef8c6e.da96bc5e8bc7d3725c763f8c2290da5e.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">Intel Core i9-14900K - Core i9 14th Gen 24-Core (8P+16E) LGA 1700 125W Intel UHD Graphics 770</h5>
+                            <p class="card-text mt-auto">QAR 2,313.60</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="row">
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="cpu5">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/19-118-414-V01.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">Intel Core i7-13700K - Core i7 13th Gen Raptor Lake 16-Core (8P+8E) P-core Base Frequency: 3.4 GHz</h5>
+                            <p class="card-text mt-auto">QAR 1,472.02</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="cpu6">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/19-113-765-01.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">AMD Ryzen Threadripper PRO 5965WX - Ryzen Threadripper PRO Chagall PRO (Zen 3)</h5>
+                            <p class="card-text mt-auto">QAR 8,464.90</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="cpu7">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/19-118-414-V01.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">Intel Core i7-13700K - Core i7 13th Gen Raptor Lake 16-Core (8P+8E)</h5>
+                            <p class="card-text mt-auto">QAR 1,472.02</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="cpu8">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/19-113-664-V01.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">AMD Ryzen 9 5900X - Ryzen 9 5000 Series Vermeer (Zen 3) 12-Core 3.7 GHz Socket AM4</h5>
+                            <p class="card-text mt-auto">QAR 1,407.51</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev custom-carousel-btn" type="button"
+                  data-bs-target="#carouselcpu" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next custom-carousel-btn" type="button"
+                  data-bs-target="#carouselcpu" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+              </div>
+            </div>
+
+            <!-- MOTHERBOARD CARDS -->
+            <div class="tab-pane fade" id="pills-motherboard" role="tabpanel" aria-labelledby="pills-contact-tab"
+              tabindex="0">
+              <div id="carouselmother" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="row">
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="mb1">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/13-162-048-V01.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">ASRock B660M PRO RS LGA 1700 Intel B660 SATA 6Gb/s DDR4 Micro ATX Motherboard</h5>
+                            <p class="card-text mt-auto">QAR 354.92</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="mb2">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/13-145-417-01.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">GIGABYTE Z790 AORUS ELITE AX LGA 1700 Intel Z790 ATX Motherboard with DDR5, Quad M.2</h5>
+                            <p class="card-text mt-auto">QAR 1,003.98</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="mb3">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/13-119-597-V01.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">ASUS ROG Maximus Z790 Hero (WiFi 6E) LGA 1700(Intel 14th & 13th&12th
+                              Gen) ATX gaming motherboard</h5>
+                            <p class="card-text mt-auto">QAR 2,099.48</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light  text-dark shadow-lg" style="width: 18rem; height: 29.75rem;">
+                          <div class="mb4">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/13-119-601-V01.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">ASUS Prime Z790-A WiFi 6E LGA 1700(Intel®14th &13th&12th Gen) ATX
+                              motherboard</h5>
+                            <p class="card-text mt-auto">QAR 1,176.17</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="row">
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="mb5">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/13-162-039-V19.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">ASRock Z690 Pro RS LGA 1700 (14th,13th,12th Gen) Intel Z690 SATA 6Gb/s DDR4</h5>
+                            <p class="card-text mt-auto">QAR 499.43</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="mb6">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/13-144-629-05.png"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">MSI PRO Z790 GAMING PRO WIFI LGA 1700 SATA 6Gb/s DDR5 ATX (280)
+                              Motherboards - Intel</h5>
+                            <p class="card-text mt-auto">QAR 873.97</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="mb7">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/13-157-939-V01.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">ASRock B550M PRO4 AM4 AMD B550 SATA 6Gb/s Micro ATX AMD Motherboard
+                            </h5>
+                            <p class="card-text mt-auto">QAR 378.66</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="mb8">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/13-144-564-V06.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">MSI MPG Z790 EDGE WIFI LGA 1700 Intel Z790 SATA 6Gb/s DDR5 ATX
+                              Motherboard</h5>
+                            <p class="card-text mt-auto">QAR 1,584.94</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev custom-carousel-btn" type="button"
+                  data-bs-target="#carouselmother" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next custom-carousel-btn" type="button"
+                  data-bs-target="#carouselmother" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+              </div>
+            </div>
+
+            <!-- RAM CARDS -->
+            <div class="tab-pane fade" id="pills-ram" role="tabpanel" aria-labelledby="pills-gpu-tab" tabindex="0">
+              <div id="carouselram" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="row">
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="ram1">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/20-374-351-10.png"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">G.SKILL Trident Z5 RGB Series 32GB (2 x 16GB) 288-Pin PC RAM DDR5
+                              6000 (PC5 48000)</h5>
+                            <p class="card-text mt-auto">QAR 465.31</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="ram2">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/20-236-607-02.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">CORSAIR Vengeance RGB Pro 32GB (2 x 16GB) 288-Pin PC RAM DDR4 3600
+                              (PC4 28800)</h5>
+                            <p class="card-text mt-auto">QAR 340.82</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="ram3">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/20-331-354-V08.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">Team T-FORCE VULCAN Z 16GB (2 x 8GB) 288-Pin PC RAM DDR4 3200 (PC4
+                              25600)</h5>
+                            <p class="card-text mt-auto">QAR 145.64</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="ram4">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/A4YUD21110213Q7GH.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">Kingston FURY Renegade RGB 128GB (4 x 32GB) 288-pin DIMM DDR4 3600
+                              MHz CL18</h5>
+                            <p class="card-text mt-auto">QAR 2,529.83</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="row">
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="ram5">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/20-374-358-10.png"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">G.SKILL Trident Z5 RGB Series 32GB (2 x 16GB) 288-Pin PC RAM DDR5
+                              6400</h5>
+                            <p class="card-text mt-auto">QAR 484.00</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="ram6">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/20-232-091-08.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">G.SKILL Ripjaws V Series 32GB (2 x 16GB) 288-Pin PC RAM DDR4 3200
+                              (PC4 25600)</h5>
+                            <p class="card-text mt-auto">QAR 262.15</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="ram7">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/20-331-749-05.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">Team T-Force Delta RGB 32GB (2 x 16GB) 288-Pin PC RAM DDR5 6000 (PC5
+                              48000)</h5>
+                            <p class="card-text mt-auto">QAR 396.81</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="ram8">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/20-232-920-V01.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">G.SKILL TridentZ RGB Series 32GB (2 x 16GB) 288-Pin PC RAM DDR4 3600
+                              (PC4 28800)</h5>
+                            <p class="card-text mt-auto">QAR 319.47</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev custom-carousel-btn" type="button"
+                  data-bs-target="#carouselram" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next custom-carousel-btn" type="button"
+                  data-bs-target="#carouselram" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+              </div>
+            </div>
+
+            <!-- STORAGE CARDS -->
+            <div class="tab-pane fade" id="pills-storage" role="tabpanel" aria-labelledby="pills-gpu-tab" tabindex="0">
+              <div id="carouselstorage" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="row">
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="store1">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/20-250-218-V05.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">Western Digital WD_BLACK SN770 M.2 2280 2TB PCIe Gen4 16GT/s, up to 4
+                              Lanes</h5>
+                            <p class="card-text mt-auto">QAR 445.10</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="store2">
+                            <img class="card-img-top ihv"
+                              src="https://www.disctech.com/SCASite/product_images/WD101EFBX_1000-2.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">WD Red Plus 10TB NAS Hard Disk Drive - 7200 RPM Class SATA 6Gb/s,
+                              CMR</h5>
+                            <p class="card-text mt-auto">QAR 764.11</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="store3">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/20-147-790-V01.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">SAMSUNG 980 PRO SSD 1TB, PCIe 4.0 M.2 2280, Speeds Up-to 7,000MB/s
+                              </h5>
+                            <p class="card-text mt-auto">QAR 364.16</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="store4">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/22-185-011-01.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">Seagate Exos X20 ST20000NM007D 20TB 7200 RPM 256MB Cache 3.5"
+                              Internal Hard Drive</h5>
+                            <p class="card-text mt-auto">QAR 1,294.73</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="row">
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="store5">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/22-185-036-V01.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">Seagate FireCuda ST8000DX001 8TB 7200 RPM 256MB Cache SATA 6.0Gb/s
+                              3.5"</h5>
+                            <p class="card-text mt-auto">QAR 1,053.06</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="store6">
+                            <img class="card-img-top ihv"
+                              src="https://tse4.mm.bing.net/th/id/OIP.XVV0cRmLmEuIKXv8GxTjnwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">WD_BLACK C50 Expansion Card Xbox 1TB WDBMPH0010BNC-WCSN</h5>
+                            <p class="card-text mt-auto">QAR 522.51</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="store7">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/20-313-680-04.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">Team 32GB C162 USB 3.2 Gen1 Flash Drive, Up to 100MB/s (TC162332GB01)
+                            </h5>
+                            <p class="card-text mt-auto">QAR 22.21</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="store8">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/20-147-767-V07.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">SAMSUNG T7 Portable SSD 1TB - Up to 1050 MB/s - USB 3.2 Gen 2
+                              </h5>
+                            <p class="card-text mt-auto">QAR 381.79</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev custom-carousel-btn" type="button"
+                  data-bs-target="#carouselstorage" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next custom-carousel-btn" type="button"
+                  data-bs-target="#carouselstorage" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+              </div>
+            </div>
+
+            <!-- COOLER CARDS -->
+            <div class="tab-pane fade" id="pills-coolers" role="tabpanel" aria-labelledby="pills-gpu-tab" tabindex="0">
+              <div id="carouselcooler" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="row">
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="cool1">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/35-181-317-15.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">CORSAIR CW-9060058-WW iCUE H100i RGB ELITE Liquid CPU Cooler</h5>
+                            <p class="card-text mt-auto">QAR 534.68</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="cool2">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/35-181-337-01.png"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">CORSAIR iCUE H150i ELITE LCD XT Liquid CPU Cooler - IPS LCD Screen -
+                              AF120</h5>
+                            <p class="card-text mt-auto">QAR 1,099.54</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="cool3">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/35-146-119-10.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">NZXT Kraken 280mm - RL-KN280-B1 – AIO CPU Liquid Cooler - LCD Display
+                              </h5>
+                            <p class="card-text mt-auto">QAR 542.52</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="cool4">
+                            <img class="card-img-top ihv"
+                              src="https://i5.walmartimages.com/asr/60580f7c-8a95-49b2-85e0-acd6dc79fc3f.1f4171b9f9cba53706b3d3ea714b5436.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">MSI MAG Core Liquid 240R V2 AIO Liquid CPU Cooler, 240mm Radiator,
+                              Dual PWM, ARGB Lighting</h5>
+                            <p class="card-text mt-auto">QAR 433.16</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="row">
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="cool5">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/35-146-131-01.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">NZXT Kraken Elite RGB 240mm - RL-KR24E-B1 – RGB AIO CPU Liquid Cooler
+                            </h5>
+                            <p class="card-text mt-auto">QAR 808.42</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="cool6">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/35-856-249-V01.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">DeepCool LT520 WH Premium Liquid CPU Cooler, 240mm, High-Performance
+                              FK120 FDB Fansk</h5>
+                            <p class="card-text mt-auto">QAR 399.14</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="cool7">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/35-181-332-01.png"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">CORSAIR iCUE H150i ELITE CAPELLIX XT Liquid CPU Cooler - AF120 RGB
+                              ELITE Fans</h5>
+                            <p class="card-text mt-auto">QAR 840.25</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="cool8">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/35-103-298-V01.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">Cooler Master MasterLiquid ML120L RGB V2, Close-Loop AIO CPU Liquid
+                              Cooler</h5>
+                            <p class="card-text mt-auto">QAR 349.00</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev custom-carousel-btn" type="button"
+                  data-bs-target="#carouselcooler" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next custom-carousel-btn" type="button"
+                  data-bs-target="#carouselcooler" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+              </div>
+            </div>
+
+            <!-- PSU CARDS -->
+            <div class="tab-pane fade" id="pills-psu" role="tabpanel" aria-labelledby="pills-gpu-tab" tabindex="0">
+              <div id="carouselpsu" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="row">
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="psu1">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/17-151-188-Z01.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">Seasonic FOCUS GX-850, 850W 80+ Gold, Full-Modular, Fan Control in
+                              Fanless</h5>
+                            <p class="card-text mt-auto">QAR 459.00</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="psu2">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/17-139-300-03.png"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">CORSAIR RM750e Fully Modular Low-Noise ATX Power Supply - ATX 3.0 &
+                            </h5>
+                            <p class="card-text mt-auto">QAR 381.65</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="psu3">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/17-153-456-01.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">Thermaltake Smart BM3 650W 80Plus Bronze ATX 3.0 & PCIE 5.0 Ready
+                              Semi-Modular</h5>
+                            <p class="card-text mt-auto">QAR 265.61</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="psu4">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/17-438-221-08.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">EVGA SuperNOVA 1000 GT, 80 Plus Gold 1000W, Fully Modular, Eco Mode
+                              with FDB Fan</h5>
+                            <p class="card-text mt-auto">QAR 605.37</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="row">
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="psu5">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/17-139-272-V01.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">CORSAIR RMx Series (2021) RM850x CP-9020200-NA 850 W ATX12V / EPS12V
+                              80 PLUS GOLD</h5>
+                            <p class="card-text mt-auto">QAR 496.50</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="psu6">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/17-139-278-01.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">CORSAIR RM850 CP-9020232-NA 850 W ATX 80 PLUS GOLD Certified Full
+                              Modular Power Supply</h5>
+                            <p class="card-text mt-auto">QAR 439.24</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="psu7">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/ABP9S23032213ZKU200.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">FSP Hydro G PRO 1000W, ATX3.0 & PCIe 5.0(Gen 5), 80+ Gold Power
+                              Supply (HG2-1000, Gen5)</h5>
+                            <p class="card-text mt-auto">QAR 646.73</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="psu8">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/A68VS2301270XTEZS9A.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">be quiet! Dark Power 13 1000W ATX 3.0 Power Supply | 80 PLUS Titanium
+                              Efficiency</h5>
+                            <p class="card-text mt-auto">QAR 989.62</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev custom-carousel-btn" type="button"
+                  data-bs-target="#carouselpsu" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next custom-carousel-btn" type="button"
+                  data-bs-target="#carouselpsu" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+              </div>
+            </div>
+
+            <!-- COMPUTER CASE CARDS -->
+            <div class="tab-pane fade" id="pills-computercases" role="tabpanel" aria-labelledby="pills-gpu-tab" tabindex="0">
+              <div id="carouselcase" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="row">
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="case1">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/11-139-156-V01.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">Corsair 4000D Airflow CC-9011200-WW Black Steel / Plastic / Tempered
+                              Glass ATX</h5>
+                            <p class="card-text mt-auto">QAR 305.38</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="case2">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/11-146-343-03.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">NZXT H5 Flow - All White CC-H51FW-01 White SGCC Steel, Tempered Glass
+                              ATX</h5>
+                            <p class="card-text mt-auto">QAR 326.23</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="case3">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/11-119-431-V16.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">Cooler Master HAF 500 H500-WGNN-S00 White Steel / Plastic / Tempered
+                              Glass ATX</h5>
+                            <p class="card-text mt-auto">QAR 357.38</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="case4">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/11-854-078-V20.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">Phanteks Enthoo Evolv X PH-ES518XTG_DBK01 Satin Black Aluminum /
+                              Tempered Glass</h5>
+                            <p class="card-text mt-auto">QAR 756.73</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="row">
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="case5">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/11-129-268-36.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">Antec Dark League DF600 FLUX, Mid-Tower ATX Gaming Case, FLUX
+                              Platform</h5>
+                            <p class="card-text mt-auto">QAR 340.56</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="case6">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/11-854-124-01.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">Phanteks Eclipse G300A Ultra-fine Performance Mesh, Mid-tower case,
+                              D-RGB fan</h5>
+                            <p class="card-text mt-auto">QAR 190.93</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="case7">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/11-139-192-03.png"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">CORSAIR 3000D AIRFLOW Mid-Tower PC Case - Black - 2x SP120 ELITE Fans
+                              - Four-Slot GPU</h5>
+                            <p class="card-text mt-auto">QAR 264.88</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="case8">
+                            <img class="card-img-top ihv"
+                              src="https://microless.com/cdn/products/0f83fe5d122e19636e25b6dd37b9aa50-hi.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">be quiet! Pure Base 500DX Black, ATX Computer Case, ARGB, Mid Tower,
+                              Tempered Glass Window</h5>
+                            <p class="card-text mt-auto">QAR 345.08</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev custom-carousel-btn" type="button"
+                  data-bs-target="#carouselcase" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next custom-carousel-btn" type="button"
+                  data-bs-target="#carouselcase" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+              </div>
+            </div>
+
+            <!-- MONITOR CARDS -->
+            <div class="tab-pane fade" id="pills-monitor" role="tabpanel" aria-labelledby="pills-gpu-tab" tabindex="0">
+              <div id="carouselmonitor" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="row">
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="mon1">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/24-012-015-01.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">GIGABYTE G27Q 27" 144Hz 1440P Gaming Monitor, 2560 x 1440 IPS
+                              Display</h5>
+                            <p class="card-text mt-auto">QAR 841.45</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="mon2">
+                            <img class="card-img-top ihv"
+                              src="https://m.media-amazon.com/images/I/41Qwe6tiP7L._AC_UF350,350_QL80_.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">Acer 27” 170Hz 2K Gaming Monitor 1ms AMD FreeSync Premium, WQHD (2560
+                              x 1440)</h5>
+                            <p class="card-text mt-auto">QAR 643.14</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="mon3">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/24-475-282-11.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">MSI G271CQP E2 27" WQHD 2560 x 1440 (2K) 170 Hz 1ms response time
+                              FreeSync</h5>
+                            <p class="card-text mt-auto">QAR 687.43</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="mon4">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/24-022-912-V01.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">SAMSUNG Odyssey G5 LC34G55TWWNXZA 34" WQHD 3440 x 1440 (2K) 1ms
+                              (MPRT)</h5>
+                            <p class="card-text mt-auto">QAR 1,513.32</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="row">
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="mon5">
+                            <img class="card-img-top ihv"
+                              src="https://microless.com/cdn/products/be16b08393db9b5d818b1e25433ebe0e-md.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">ASUS 27" 170Hz WQHD Gaming Monitor 1ms Freesync Premium™</h5>
+                            <p class="card-text mt-auto">QAR 680.98</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="mon6">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/24-027-252-17.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">SAMSUNG S50GC LS34C502GANXZA 34" 3440 x 1440 WQHD, VA, 3-Side
+                              Bezeless</h5>
+                            <p class="card-text mt-auto">QAR 951.11</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="mon7">
+                            <img class="card-img-top ihv"
+                              src="https://i5.walmartimages.com/asr/0c1b9d0f-6c05-4ccf-ab5a-457e6c34c490.467c21550f1065c6dbb1b260cb00931e.jpeg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">MSI 32" 144 Hz UHD gaming monitor FreeSync Premium (AMD Adaptive
+                              Sync)</h5>
+                            <p class="card-text mt-auto">QAR 1,527.68</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="mon8">
+                            <img class="card-img-top ihv"
+                              src="https://i5.walmartimages.com/asr/557a2ebd-04cc-48e9-bc3f-e49f631e0bbb.d59cb3a429cdfc801acdab79793cd197.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">MSI 40.0 155 Hz IPS UWQHD IPS Gaming Monitor FreeSync Premium (AMD
+                              Adaptive Sync)</h5>
+                            <p class="card-text mt-auto">QAR 1,374.93</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev custom-carousel-btn" type="button"
+                  data-bs-target="#carouselmonitor" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+                </button>
+                <button class="carousel-control-next custom-carousel-btn" type="button"
+                  data-bs-target="#carouselmonitor" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+                </button>
+              </div>
+            </div>
+
+            <!-- PERIPHERAL CARDS -->
+            <div class="tab-pane fade" id="pills-peripherals" role="tabpanel" aria-labelledby="pills-gpu-tab" tabindex="0">
+              <div id="carouselperipheral" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="row">
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="per1">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/32K-0002-000P4-S01.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">Logitech - G PRO Lightweight Wireless Optical Ambidextrous Gaming
+                              Mouse with RGB Lighting - Black</h5>
+                            <p class="card-text mt-auto">QAR 442.17</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="per2">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/23-126-615-V01.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">Logitech G915 TKL Tenkeyless Lightspeed Wireless RGB Mechanical
+                              Gaming Keyboard</h5>
+                            <p class="card-text mt-auto">QAR 747.68</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="per3">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/26-738-041-09.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">HyperX Pulsefire Haste 2 – Wireless Gaming Mouse- Ultra Lightweight,
+                              61g, 100 Hour Battery Life</h5>
+                            <p class="card-text mt-auto">QAR 333.57</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="per4">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/AR0TD2112180K94SPF8.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">HyperX Alloy Origins Mechanical Gaming Keyboard HX Red US Layout
+                              4P4F6AAABA</h5>
+                            <p class="card-text mt-auto">QAR 429.00</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="row">
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="per5">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/26-816-122-V11.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">Corsair M65 RGB Elite – Wired FPS and MOBA Gaming Mouse – Adjustable
+                              Weight and Balance</h5>
+                            <p class="card-text mt-auto">QAR 101.35</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="per6">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/23-816-141-V15.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">Corsair K60 RGB Pro SE Mechanical Gaming Keyboard - Cherry Mechanical
+                              Keyswitches</h5>
+                            <p class="card-text mt-auto">QAR 280.70</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="per7">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/26-153-335-06.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">Razer Basilisk V3 Pro Customizable Wireless Gaming Mouse: Fast
+                              Optical Switches Gen-3</h5>
+                            <p class="card-text mt-auto">QAR 641.74</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="per8">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/A8X5S2107036r2X1.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">Razer BlackWidow V3 Mechanical Gaming Keyboard: Green Mechanical
+                              Switches - Tactile & Clicky</h5>
+                            <p class="card-text mt-auto">QAR 521.31</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev custom-carousel-btn" type="button"
+                  data-bs-target="#carouselperipheral" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next custom-carousel-btn" type="button"
+                  data-bs-target="#carouselperipheral" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+              </div>
+            </div>
+
+            <!-- ACCESSORIES CARDS -->
+            <div class="tab-pane fade" id="pills-accessories" role="tabpanel" aria-labelledby="pills-gpu-tab" tabindex="0">
+              <div id="carouselaccessory" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="row">
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="access1">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/26-785-204-V01.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">ASUS ROG Delta S Gaming Headset with USB-C, Ai Powered
+                              Noise-Canceling Microphone</h5>
+                            <p class="card-text mt-auto">QAR 940.37</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="access2">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/86-847-001-06.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">Blue Yeti USB Microphone for PC, Mac, Gaming, Recording, Streaming,
+                              Podcasting</h5>
+                            <p class="card-text mt-auto">QAR 441.11</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="access3">
+                            <img class="card-img-top ihv"
+                              src="https://eezepc.com/wp-content/uploads/2021/05/Logitech-G935-Wireless-7.1-Surround-Sound-LIGHTSYNC-Gaming-Headset-EEZEPC-2..jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">Logitech - G935 Wireless 7.1 Surround Sound Over-the-Ear Gaming
+                              Headset for PC</h5>
+                            <p class="card-text mt-auto">QAR 689.59</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="access4">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/V3E0D201009RG9IH.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">HyperX QuadCast USB Condenser Gaming Microphone for PC, PS4 and Mac -
+                              Red</h5>
+                            <p class="card-text mt-auto">QAR 1751.82</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="row">
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="access5">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/26-193-148-08.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">Rosewill SAROS C740S Active Noise Cancelling (ANC) Wireless Over-Ear
+                              Headphones</h5>
+                            <p class="card-text mt-auto">QAR 80.20</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="access6">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/36-431-029-Z01.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">Logitech for Creators Blue Yeti USB Microphone for PC, Podcast,
+                              Gaming, Streaming</h5>
+                            <p class="card-text mt-auto">QAR 522.51</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="access7">
+                            <img class="card-img-top ihv"
+                              src="https://c1.neweggimages.com/ProductImageCompressAll1280/V1DSD2210200OT7HS29.jpg"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">Logitech Zone Vibe 100 Lightweight Wireless Over Ear Headphones with
+                              Noise Canceling</h5>
+                            <p class="card-text mt-auto">QAR 404.66</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="pt-3 card bg-light text-dark shadow-lg d-flex flex-column"
+                          style="width: 18rem; height: 29.75rem;">
+                          <div class="access8">
+                            <img class="card-img-top ihv"
+                              src="https://media.officedepot.com/images/f_auto,q_auto,e_sharpen,h_450/products/9667875/9667875_o69_et_10852890/9667875"
+                              alt="Card image cap">
+                          </div>
+                          <div class="card-body d-flex flex-column" style="max-height: 240px; flex: 1;">
+                            <h5 class="card-title">Blue Yeti GX Dynamic Microphone - Black 988-000567</h5>
+                            <p class="card-text mt-auto">QAR 617.00</p>
+                            <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev custom-carousel-btn" type="button"
+                  data-bs-target="#carouselaccessory" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next custom-carousel-btn" type="button"
+                  data-bs-target="#carouselaccessory" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+  <!-- Featured Brands -->
+  <div class="container-fluid py-4 px-3 bg-primary shadow-lg" style="
+      background-image: url(https://media4.giphy.com/media/J19UYavxCtJREzZq1b/giphy.gif?cid=ecf05e47pvvat41ok5r4abuws9zmyrb3onhz2egk5ryc6wz6&ep=v1_gifs_related&rid=giphy.gif&ct=s);
+      background-repeat: repeat;
+      background-position: center;
+      background-size: contain;
+      ">
+
+
+    <div class="container-fluid bg-dark px-4 py-1 my-4 shadow-lg imageReveal d-flex align-items-center">
+      <h1 class="orbitron-title mb-0">Just for you</h1>
+      <h1 class="orbitron-title mb-0 ms-auto text-end">Brand Deals</h1>
+    </div>
+
+
+
+    <div class="row g-4 imageReveal">
+      <!-- Left Section -->
+      <div class="col-lg-6 imageFadeout">
+        <div class="promo-card">
+          <img src="https://targetesports.com/wp-content/uploads/2024/02/asus_campaign_1.jpg" alt="ROG" />
+          <div class="overlay"></div>
+          <div class="promo-content">
+            <h1 class="promo-title">ROG</h1>
+          </div>
+          <button class="shop-btn">Shop Now</button>
+        </div>
+      </div>
+
+      <!-- Right Section -->
+      <div class="col-lg-6 imageFadeout">
+        <div class="promo-card">
+          <img
+            src="https://storage-asset.msi.com/event/2026/cnd/best-34-ultrawide-and-32-inch-qd-oled-gaming-monitor/images/kv-pc.webp"
+            alt="MSI" />
+          <div class="overlay"></div>
+          <div class="promo-content">
+            <h1 class="promo-title">MSI</h1>
+          </div>
+          <button class="shop-btn">Shop Now</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row pb-3 g-4 my-3 imageReveal">
+      <!-- Left Section -->
+      <div class="col-lg-6 imageFadeout">
+        <div class="promo-card">
+          <img
+            src="https://www.nvidia.com/content/dam/en-zz/Solutions/gfn/webassets/server-status/geforce-now-50-series-announce-nv-sfg-thumbnail-1920x1080.jpg"
+            alt="NVIDIA" />
+          <div class="overlay"></div>
+          <div class="promo-content">
+            <h1 class="promo-title">NVIDIA</h1>
+          </div>
+          <button class="shop-btn">Shop Now</button>
+        </div>
+      </div>
+
+      <!-- Right Section -->
+      <div class="col-lg-6 imageFadeout">
+        <div class="promo-card">
+          <img src="https://amdgaming.gg/gamerhub/wp-content/uploads/2026/02/AMD-Game-Bundle-EN-scaled.png" alt="AMD" />
+          <div class="overlay"></div>
+          <div class="promo-content">
+            <h1 class="promo-title">AMD</h1>
+          </div>
+          <button class="shop-btn">Shop Now</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- Laptop/Prebuilt Computer -->
+  <div class="w-100 col-xl-8 px-5 py-2 shadow-lg imageReveal">
+    <div class="row flex-lg-row-reverse align-items-stretch g-5 py-5 imageFadeout">
+
+      <!-- DESKTOP CAROUSEL -->
+      <div class="col-10 col-sm-8 col-lg-6 d-flex">
+        <div id="computercarousel" class="carousel slide w-100">
+          <div class="carousel-inner h-100">
+            <div class="carousel-item active h-100">
+              <div class="card bg-light text-center text-dark shadow-lg w-100">
+                <img class="card-img-top-lp"
+                  src="https://c1.neweggimages.com/ProductImageCompressAll1280/83-221-776-04.jpg" alt="ASUS PC">
+                <div class="card-header bg-dark text-light">
+                  <h1>Prebuilt Computers</h1>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">ASUS ROG G16CH (2023) Gaming Desktop PC, Intel Core i7-13700KF, RTX 4070, 1TB
+                    SSD, 16GB RAM</h5>
+                  <p class="card-text">QAR 7,006.65</p>
+                  <a href="#" class="btn view-details-btn btn-dark">View Details</a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item h-100">
+              <div class="card bg-light text-center text-dark shadow-lg w-100">
+                <img class="card-img-top-lp" src="https://i.ebayimg.com/images/g/EqQAAOSwh7pmXmzj/s-l1200.jpg"
+                  alt="Cobratype PC">
+                <div class="card-header bg-dark text-light">
+                  <h1>Prebuilt Computers</h1>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Cobratype Canebrake Gaming PC, Ryzen 5 5600G, Vega 7 Graphics, 16GB RAM, 512GB
+                    NVMe</h5>
+                  <p class="card-text">QAR 2,208.13</p>
+                  <a href="#" class="btn view-details-btn btn-dark">View Details</a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item h-100">
+              <div class="card bg-light text-center text-dark shadow-lg" style="width:100%;">
+                <img class="card-img-top-lp"
+                  src="https://c1.neweggimages.com/ProductImageCompressAll1280/83-101-904-08.jpg" alt="ACER Nitro PC">
+                <div class="card-header bg-dark text-light">
+                  <h1>Prebuilt Computers</h1>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Acer Gaming Desktop Nitro 50 N50-650-UR12 Intel Core i5 13th Gen 13400F
+                    (2.50GHz) 16GB DDR4 1 TB PCIe SSD</h5>
+                  <p class="card-text">QAR 3,804.44</p>
+                  <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item h-100">
+              <div class="card bg-light text-center text-dark shadow-lg" style="width:100%;">
+                <img class="card-img-top-lp"
+                  src="https://c1.neweggimages.com/ProductImageCompressAll1280/83-151-276-25.jpg" alt="MSI PC">
+                <div class="card-header bg-dark text-light">
+                  <h1>Prebuilt Computers</h1>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">MSI Gaming Desktop Aegis RS 13NUE-450US Intel Core i7 13th Gen 13700KF
+                    (3.40GHz) 32GB DDR5 2 TB PCIe SSD</h5>
+                  <p class="card-text">QAR 7,267.73</p>
+                  <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev custom-carousel-btn-lp" type="button" data-bs-target="#computercarousel"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next custom-carousel-btn-lp" type="button" data-bs-target="#computercarousel"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- LAPTOP CAROUSEL -->
+      <div class="col-10 col-sm-8 col-lg-6 d-flex">
+        <div id="laptopcarousel" class="carousel slide w-100">
+          <div class="carousel-inner h-100">
+            <div class="carousel-item active h-100">
+              <div class="card bg-light text-center text-dark shadow-lg w-100">
+                <img class="card-img-top-lp"
+                  src="https://c1.neweggimages.com/ProductImageCompressAll1280/1TS-000E-18JS3-V01.jpg"
+                  alt="Lenovo Laptop">
+                <div class="card-header bg-dark text-light">
+                  <h1>Laptops</h1>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Lenovo LOQ 15IRH8 - Gaming Laptop Computer - NVIDIA GeForce RTX 4050-15.6" FHD
+                  </h5>
+                  <p class="card-text">QAR 2,822.94</p>
+                  <a href="#" class="btn view-details-btn btn-dark">View Details</a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item h-100">
+              <div class="card bg-light text-center text-dark shadow-lg w-100">
+                <img class="card-img-top-lp"
+                  src="https://c1.neweggimages.com/ProductImageCompressAll1280/34-156-560-01.png" alt="MSI Laptop">
+                <div class="card-header bg-dark text-light">
+                  <h1>Laptops</h1>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">MSI Katana 17 Gaming Laptop: 13th Gen Intel Core i7, GeForce RTX 4060, 17.3"
+                    144Hz FHD Display</h5>
+                  <p class="card-text">QAR 4,835.36</p>
+                  <a href="#" class="btn view-details-btn btn-dark">View Details</a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item h-100">
+              <div class="card bg-light text-center text-dark shadow-lg" style="width:100%;">
+                <img class="card-img-top-lp"
+                  src="https://c1.neweggimages.com/ProductImageCompressAll1280/34-236-429-11.jpg" alt="ASUS Laptop">
+                <div class="card-header bg-dark text-light">
+                  <h1>Laptops</h1>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">ASUS ROG Strix G16 (2023) Gaming Laptop, 16” 16:10 FHD 165Hz, GeForce RTX 4050
+                  </h5>
+                  <p class="card-text">QAR 3,629.54</p>
+                  <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item h-100">
+              <div class="card bg-light text-center text-dark shadow-lg" style="width:100%;">
+                <img class="card-img-top-lp"
+                  src="https://c1.neweggimages.com/ProductImageCompressAll1280/34-236-430-20.jpg" alt="MSI GPU">
+                <div class="card-header bg-dark text-light">
+                  <h1>Laptops</h1>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">ASUS TUF Gaming A17 (2023) Gaming Laptop, 17.3" FHD 144Hz Display, GeForce RTX
+                    4070</h5>
+                  <p class="card-text">QAR 5,534.23</p>
+                  <a href="#" class="btn view-details-btn btn-dark mt-auto">View Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev custom-carousel-btn-lp" type="button" data-bs-target="#laptopcarousel"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next custom-carousel-btn-lp" type="button" data-bs-target="#laptopcarousel"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- Featured Event Banner -->
+  <div class="container-fluid pt-4 px-0 bg-primary shadow-lg d-flex justify-content-center flex-column" style="
+      background-image: url(https://media4.giphy.com/media/J19UYavxCtJREzZq1b/giphy.gif?cid=ecf05e47pvvat41ok5r4abuws9zmyrb3onhz2egk5ryc6wz6&ep=v1_gifs_related&rid=giphy.gif&ct=s);
+      background-repeat: repeat;
+      background-position: center;
+      background-size: contain;">
+    <div class="pt-1 mt-4 imageReveal w-100">
+      <img class="img-fluid imageFadeout"
+        src="https://www.gigahertz.com.ph/cdn/shop/collections/Intel_Battlefield_6_Promo_Landing_Page_Banner__Landing_Page.jpg?v=1756364448"
+        alt="Intel Banner" />
+    </div>
+    <div class="py-0 mb-5 imageReveal justify-content-center">
+      <img class="img-fluid pb-5" src="https://promotions.newegg.com/Brand/Intel/banner1.jpg" style="width: 100%;"
+        alt="Intel Banner" />
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+  <section class="footer">
+    <div class="container imageRevealFooter">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 text-light">
+        <div class="col-md-4 mb-0 text-light">
+          <p class="fs-5 mb-0 text-light fw-bold">© 2026-2027 XCOM, Inc</p>
+          <p class="px-4 mb-0 text-light">Discover the latest technology and find the perfect device for you.</p>
+        </div>
+        <ul class="nav col-lg-4">
+          <div class="container overflow-hidden">
+            <div class="row gx-5">
+              <div class="col">
+                <div class="card-body">
+                  <h5 id="aboutus" class="card-title">About Us</h5>
+                  <p class="card-text">Just your friendly neighborhood computer hardware retailer.</p>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card-body">
+                  <h5 id="contactus" class="card-title">Contact Us</h5>
+                  <p class="card-text">0(xxx) xxx xxxx</p>
+                  <p class="card-text">xcom@bus.co</p>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card-body">
+                  <h5 id="followus" class="cardtitle">Follow Us</h5>
+                  <i class="fab fa-facebook"></i>
+                  <i class="fab fa-instagram"></i>
+                  <i class="fab fa-twitter"></i>
+                  <i class="fab fa-x-twitter"></i>
+                  <i class="fab fa-linkedin"></i>
+                  <i class="fab fa-youtube"></i>
+                  <i class="fab fa-tiktok"></i>
+                  <i class="fab fa-snapchat"></i>
+                  <i class="fab fa-pinterest"></i>
+                  <i class="fab fa-reddit"></i>
+                  <i class="fab fa-discord"></i>
+                  <i class="fab fa-telegram"></i>
+                  <i class="fab fa-whatsapp"></i>
+                  <i class="fab fa-github"></i>
+                  <i class="fab fa-behance"></i>
+                  <i class="fab fa-dribbble"></i>
+                  <i class="fab fa-medium"></i>
+                  <i class="fab fa-slack"></i>
+                  <i class="fab fa-skype"></i>
+                  <i class="fab fa-twitch"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ul>
+      </footer>
+      <div class="d-flex align-items-end text-light gap-5 pt-5 pb-4">
+        <div class="d-flex flex-column">
+          <div class="mb-4" style="background-color: white; height: 5px; width: 100%;">
+          </div>
+          <div class="d-flex">
+            <p class="fw-bold mb-0">1-234-XCOM</p>
+            <p class=" mb-0 px-5">info@xcomputerdirect.com</p>
+          </div>
+        </div>
+        <form class="d-flex flex-column px-5">
+          <div class="mb-2">
+            <h5 class="mb-0">Subscribe to our newsletter</h5>
+            <small>Monthly digest of what's new and exciting from us.</small>
+          </div>
+          <div class="d-flex gap-2">
+            <input id="newsletter1" type="email" class="form-control" placeholder="Email address" style="width: 250px;">
+            <button class="btn btn-primary" type="button">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+</body>
+
+</html>
